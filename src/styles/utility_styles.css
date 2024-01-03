@@ -1,0 +1,49 @@
+/* Buttons */
+
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 0.5rem 0.5rem;
+    border-radius: 5px;
+    font-family: var(--main-font);
+    font-size: 1rem;
+}
+
+.btn-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-stack button {
+    align-self: center;
+}
+
+.btn-brush {
+    height: fit-content;
+    width: fit-content;
+    -webkit-mask-image: url(paintstripe.png);
+        mask-image: url(paintstripe.png);
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;       
+}
+
+.btn-brush:hover {
+    filter: brightness(1.25);
+}
+
+.btn-brush:active {
+    background-color: var(--dk-teal);
+}
+
+.btn-brush button {
+    margin: 0.5rem 2rem 0.75rem 1rem;
+    background-color: transparent;
+    color: white;
+}
