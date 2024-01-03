@@ -30,7 +30,7 @@ const cs50= new Certificate(
     "Harvard University",
   "",
   "https://pll.harvard.edu/course/cs50-introduction-computer-science",
-  "/cs50_cert",
+  "/cs50_cert.png",
   "Introduction to Computer Science at Harvard University. Covered C, Python, SQL, Javascript, CSS, HTML, and programming concepts."
 );
 
