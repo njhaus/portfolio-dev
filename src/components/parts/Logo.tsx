@@ -6,7 +6,7 @@ interface iLogo {
 const Logo = ({handlePage}: iLogo) => {
   return (
     <div className="logo-container">
-      <img src="/assets/templogopurp.png" className="logo" onClick={() => handlePage(0)}></img>
+      <img src="/src/assets/templogopurp.png" className="logo" onClick={() => handlePage(0)}></img>
     </div>
   );
 }
