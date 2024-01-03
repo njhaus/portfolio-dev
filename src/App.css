@@ -53,7 +53,7 @@ body {
   min-height: 100vh;
   position: relative;
   background-color: white;
-  background-image: url('../public/background2bw.jpeg');
+  background-image: url('./assets/background2bw.jpeg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -195,8 +195,8 @@ nav {
 .dialog-brush {
   height: fit-content;
     width: fit-content;
-    -webkit-mask-image: url('../public/paintstripe.png');
-    mask-image: url('../public/paintstripe.png');
+    -webkit-mask-image: url('./assets/paintstripe.png');
+    mask-image: url('./assets/paintstripe.png');
     mask-size: contain;
     mask-position: center;
     mask-repeat: no-repeat;
@@ -210,8 +210,8 @@ nav {
 .dialog-decoration {
   height: 40rem;
   width: 50rem;
-  -webkit-mask-image: url('../public/brushmaskflip.png');
-    mask-image: url('../public/brushmaskflip.png');
+  -webkit-mask-image: url('./assets/brushmaskflip.png');
+    mask-image: url('./assets/brushmaskflip.png');
     mask-size: contain;
     mask-repeat: no-repeat;
     position: absolute;
@@ -243,8 +243,8 @@ main {
   background-color: var(--lt-gray);
   height: 25rem;
   width: 30rem;
-  -webkit-mask-image: url('../public/brushmaskflip.png');
-    mask-image: url('../public/brushmaskflip.png');
+  -webkit-mask-image: url('./assets/brushmaskflip.png');
+    mask-image: url('./assets/brushmaskflip.png');
     mask-size: contain;
     mask-repeat: no-repeat;
     position: absolute;
@@ -284,8 +284,8 @@ main {
 .side-menu-container {
   height: 25rem;
     width: 30rem;
-    -webkit-mask-image: url('../public/brushmaskflip.png');
-    mask-image: url('../public/brushmaskflip.png');
+    -webkit-mask-image: url('./assets/brushmaskflip.png');
+    mask-image: url('./assets/brushmaskflip.png');
     mask-size: contain;
     mask-position: center;
     mask-repeat: no-repeat;
@@ -342,8 +342,8 @@ main {
   margin-top: -4rem;
   padding: 6rem;
   /* width: fit-content; */
-  -webkit-mask-image: url('../public/brushoverlay.png');
-  mask-image: url('../public/brushoverlay.png');
+  -webkit-mask-image: url('./assets/brushoverlay.png');
+  mask-image: url('./assets/brushoverlay.png');
   mask-size: 100% 100%;
   mask-repeat: no-repeat;
   background-color: #ffffffbb;
@@ -368,8 +368,8 @@ main {
   margin-top: -3rem;
   padding: 6rem;
   width: fit-content;
-  -webkit-mask-image: url('../public/brushoverlay.png');
-    mask-image: url('../public/brushoverlay.png');
+  -webkit-mask-image: url('./assets/brushoverlay.png');
+    mask-image: url('./assets/brushoverlay.png');
     mask-size: 100% 100%;
     mask-repeat: no-repeat;
     background-color: #ffffffbb;
