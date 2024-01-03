@@ -51,7 +51,7 @@ const yelpcamp = new PortfolioProject(
   "YelpCamp",
   "https://github.com/njhaus/yelpcamp",
     "https://yelpcamp-tykm.onrender.com/",
-    '../../src/assets/tempimg.png',
+    '~/src/assets/tempimg.png',
   'A full-stack website created with Node, Express, MongoDB and EJS.',
   ['EJS', 'Node', "MongoDB", "Express"]
 );
