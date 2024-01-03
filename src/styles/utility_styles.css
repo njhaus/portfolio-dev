@@ -23,8 +23,8 @@ button {
 .btn-brush {
     height: fit-content;
     width: fit-content;
-    -webkit-mask-image: url(paintstripe.png);
-        mask-image: url(paintstripe.png);
+    -webkit-mask-image: url('../public/paintstripe.png');
+        mask-image: url('../public/paintstripe.png');
     mask-size: contain;
     mask-position: center;
     mask-repeat: no-repeat;
