@@ -10,6 +10,7 @@ const Certificates = () => {
       <div className="portfolio-container">
         {certificates.map((certificate, i) => (
           <Certificate
+            key={i}
             title={certificate.title}
             school={certificate.school}
             imgLink={certificate.imgLink}

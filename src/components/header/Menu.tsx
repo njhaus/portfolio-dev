@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { pageData } from "../../data/pageData";
 import ContactMe from "./ContactMe";
 
