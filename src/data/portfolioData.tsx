@@ -51,7 +51,7 @@ const yelpcamp = new PortfolioProject(
   "YelpCamp",
   "https://github.com/njhaus/yelpcamp",
     "https://yelpcamp-tykm.onrender.com/",
-    '../src/assets/tempimg.png',
+    '../../src/assets/tempimg.png',
   'A full-stack website created with Node, Express, MongoDB and EJS.',
   ['EJS', 'Node', "MongoDB", "Express"]
 );
@@ -59,7 +59,7 @@ const christmasListMaker = new PortfolioProject(
   "Christmas List Maker (Front End)",
   "https://github.com/njhaus/christmas-list-maker",
   "https://christmas-list-maker-production.up.railway.app/",
-    '../src/assets/tempimg.png',
+    '../../src/assets/tempimg.png',
   'The front end of a full-stack web application created with React, Typescript, and Material UI',
   ['React', 'Typescript', 'MaterialUI']
 );
@@ -67,7 +67,7 @@ const christmasListMakerApi = new PortfolioProject(
   "Christmas List Maker (Back End)",
   "https://github.com/njhaus/christmas-list-maker-api",
   "https://christmas-list-maker-production.up.railway.app/",
-    '../src/assets/tempimg.png',
+    '../../src/assets/tempimg.png',
   'The back end of a full-stack web application created with Node, Express, and SQLite',
   ['Node', "Express", 'SQLite']
 );
@@ -75,7 +75,7 @@ const findMeTrees = new PortfolioProject(
   "Find Me Trees",
   "https://github.com/njhaus/find-me-trees2",
   "https://github.com/njhaus/find-me-trees2",
-    '../src/assets/tempimg.png',
+    '../../src/assets/tempimg.png',
   "(Under construction) A MERN stack web application including Typescript and Chakra UI.",
 ['React', 'Typescript', 'MongoDB', "Express", "Node", "ChakraUI"]
 );
@@ -83,7 +83,7 @@ const hotn = new PortfolioProject(
   "Hosts of the Night Companion App",
   "https://github.com/njhaus/HOTN",
   "https://njhaus.github.io/HOTN/",
-  '../src/assets/tempimg.png',
+  '../../src/assets/tempimg.png',
   "A board game companion app built with vanilla Javascript, HTML, and CSS.",
   ['Javascript', 'HTML', "CSS"]
 );
@@ -91,7 +91,7 @@ const colorMaze = new PortfolioProject(
   "Colors Maze",
   "https://github.com/njhaus/color-maze",
   "https://njhaus.github.io/color-maze/",
-  '../src/assets/tempimg.png',
+  '../../src/assets/tempimg.png',
   "An online game built with Javascript, Bootstrap, CSS and HTML.",
   ["Bootstrap", "CSS", "HTML"]
 );
@@ -99,7 +99,7 @@ const quotey = new PortfolioProject(
   "Quotey",
   "https://github.com/njhaus/quote-generator",
   "https://njhaus.github.io/quote-generator/",
-  '../src/assets/tempimg.png',
+  '../../src/assets/tempimg.png',
   "A random quote machine built using React and quotes from an external API",
   ['React']
 );
@@ -107,7 +107,7 @@ const emWaves = new PortfolioProject(
   "EM Waves",
   "https://github.com/njhaus/em-waves",
   "https://njhaus.github.io/em-waves/",
-  '../src/assets/tempimg.png',
+  '../../src/assets/tempimg.png',
   "A project landing page built with HTML, Bootstrap, and CSS",
   ['Bootstrap', 'HTML', "CSS"]
 );
