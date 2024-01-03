@@ -3,7 +3,7 @@ const MainImg = () => {
   return (
     <div className="main-img-container">
       <div className="main-img-mask"></div>
-      <img className="main-img" src="../../assets/headshot.png"></img>
+      <img className="main-img" src="/headshot.png"></img>
     </div>
   );
 }
