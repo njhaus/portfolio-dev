@@ -37,7 +37,7 @@ const Contact = ({ handleDialog, dialogOpen }: iContact) => {
     if (copyMsg) {
       setTimeout(() => {
         setCopyMsg('')
-      }, 2000)
+      }, 2500)
     }
   }, [copyMsg])
 

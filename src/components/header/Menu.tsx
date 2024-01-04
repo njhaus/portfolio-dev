@@ -14,7 +14,7 @@ interface iMenu {
 const Menu = ({ handlePage, currPage, handleDialog, showMenu, handleMenu}: iMenu) => {
 
   return (
-    <nav className={showMenu ? 'nav-menu show-menu' : "nav-menu"}>
+    <nav className={showMenu ? "nav-menu show-menu" : "nav-menu"}>
       <button className="dialog-close menu-close" onClick={() => handleMenu()}>
         &#x2715;
       </button>
@@ -25,15 +25,15 @@ const Menu = ({ handlePage, currPage, handleDialog, showMenu, handleMenu}: iMenu
             currPage === i ? "btn nav-btn menu-current" : "btn nav-btn"
           }
           onClick={() => {
-            handlePage(i)
+            handlePage(i);
             handleMenu();
-          }
-          }
+          }}
         >
           {page.pageText}
         </button>
       ))}
       <ContactMe handleDialog={handleDialog} handleMenu={handleMenu} />
+      <div className="dialog-decoration"></div>
     </nav>
   );
 };
