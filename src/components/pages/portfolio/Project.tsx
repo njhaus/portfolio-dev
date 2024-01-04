@@ -22,18 +22,15 @@ const Project = ({title,
       <h3>{title}</h3>
       <div className="pills-container">
         {pills.map((pill, i) => (
-          <Pill
-            key={i}
-            text={pill}
-          ></Pill>
+          <Pill key={i} text={pill}></Pill>
         ))}
       </div>
       <p>{desc}</p>
       <div>
-        <a href={githubLink}>
+        <a href={githubLink} target="_blank">
           <button className="btn project-btn">Github Repo</button>
         </a>
-        <a href={liveLink}>
+        <a href={liveLink} target="_blank">
           <button className="btn project-btn">Live Site</button>
         </a>
       </div>

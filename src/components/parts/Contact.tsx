@@ -29,7 +29,11 @@ if (!dialogOpen) return
 
   return (
     <div className="dialog-overlay" onClick={(e) => stopCloseDialog(e)}>
-      <div ref={dialogRef} className="dialog" onClick={(e) => stopCloseDialog(e)}>
+      <div
+        ref={dialogRef}
+        className="dialog"
+        onClick={(e) => stopCloseDialog(e)}
+      >
         <button className="dialog-close" onClick={() => handleDialog(false)}>
           &#x2715;
         </button>
@@ -42,7 +46,20 @@ if (!dialogOpen) return
             <span className="dialog-brush">Phone</span> (913) 203-0504
           </li>
           <li>
-            <span className="dialog-brush">Discord</span> njhaus
+            <a
+              className="dialog-brush"
+              href="https://www.linkedin.com/in/nicholas-haus-b8b58b277/"
+              target="_blank"
+            >
+              LinkedIn
+            </a>{" "}
+            Nicholas Haus
+          </li>
+          <li>
+            <span className="dialog-brush">
+              Discord
+            </span>{" "}
+            njhaus
           </li>
         </ul>
         <p>Looking forward to hearing from you!</p>

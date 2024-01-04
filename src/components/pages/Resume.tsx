@@ -7,7 +7,7 @@ const Resume = () => {
       <object
         className="resume"
         type="application/pdf"
-        data="/CS50_certificate.pdf"
+        data="../../public/CS50_certificate.pdf"
       ></object>
       <p>
         PDF not loading?{" "}
