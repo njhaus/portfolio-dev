@@ -51,7 +51,7 @@ const yelpcamp = new PortfolioProject(
   "YelpCamp",
   "https://github.com/njhaus/yelpcamp",
     "https://yelpcamp-tykm.onrender.com/",
-    '/tempimg.png',
+    '/yelpcamp-img.png',
   'A full-stack website created with Node, Express, MongoDB and EJS.',
   ['EJS', 'Node', "MongoDB", "Express"]
 );
@@ -59,7 +59,7 @@ const christmasListMaker = new PortfolioProject(
   "Christmas List Maker (Front End)",
   "https://github.com/njhaus/christmas-list-maker",
   "https://christmas-list-maker-production.up.railway.app/",
-    '/tempimg.png',
+    '/christmas-list-maker-img.png',
   'The front end of a full-stack web application created with React, Typescript, and Material UI',
   ['React', 'Typescript', 'MaterialUI']
 );
@@ -67,7 +67,7 @@ const christmasListMakerApi = new PortfolioProject(
   "Christmas List Maker (Back End)",
   "https://github.com/njhaus/christmas-list-maker-api",
   "https://christmas-list-maker-production.up.railway.app/",
-    '/tempimg.png',
+    '/christmas-list-maker-api-img.png',
   'The back end of a full-stack web application created with Node, Express, and SQLite',
   ['Node', "Express", 'SQLite']
 );
@@ -83,7 +83,7 @@ const hotn = new PortfolioProject(
   "Hosts of the Night Companion App",
   "https://github.com/njhaus/HOTN",
   "https://njhaus.github.io/HOTN/",
-  '/tempimg.png',
+  '/hotn-img.png',
   "A board game companion app built with vanilla Javascript, HTML, and CSS.",
   ['Javascript', 'HTML', "CSS"]
 );
@@ -91,26 +91,26 @@ const colorMaze = new PortfolioProject(
   "Colors Maze",
   "https://github.com/njhaus/color-maze",
   "https://njhaus.github.io/color-maze/",
-  '/tempimg.png',
+  '/colors-maze-img.png',
   "An online game built with Javascript, Bootstrap, CSS and HTML.",
   ["Bootstrap", "CSS", "HTML"]
 );
-const quotey = new PortfolioProject(
-  "Quotey",
-  "https://github.com/njhaus/quote-generator",
-  "https://njhaus.github.io/quote-generator/",
-  '/tempimg.png',
-  "A random quote machine built using React and quotes from an external API",
-  ['React']
+const homepage = new PortfolioProject(
+  "Homepage",
+  "https://github.com/njhaus/portfolio-dev",
+  "https://portfolio-dev-production.up.railway.app/",
+  "/homepage-img.png",
+  "A personal homepage built with React, Typescript, and custom CSS (It's this site.)",
+  ["React", "Typescript", "CSS"]
 );
 const emWaves = new PortfolioProject(
   "EM Waves",
   "https://github.com/njhaus/em-waves",
   "https://njhaus.github.io/em-waves/",
-  '/tempimg.png',
+  '/em-waves-img.png',
   "A project landing page built with HTML, Bootstrap, and CSS",
   ['Bootstrap', 'HTML', "CSS"]
 );
 
 
-export const portfolioData = [yelpcamp, christmasListMaker, christmasListMakerApi, findMeTrees, hotn, colorMaze, quotey, emWaves]
+export const portfolioData = [yelpcamp, christmasListMaker, christmasListMakerApi, findMeTrees, hotn, colorMaze, homepage, emWaves]

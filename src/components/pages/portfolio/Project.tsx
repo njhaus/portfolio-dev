@@ -30,8 +30,13 @@ const Project = ({title,
         <a href={githubLink} target="_blank">
           <button className="btn project-btn">Github Repo</button>
         </a>
-        <a href={liveLink} target="_blank">
-          <button className="btn project-btn">Live Site</button>
+        <a href={liveLink.match(/github.com/) ? "" : liveLink} target="_blank">
+          <button
+            className="btn project-btn"
+            disabled={liveLink.match(/github.com/) ? true : false}
+          >
+            Live Site
+          </button>
         </a>
       </div>
     </div>

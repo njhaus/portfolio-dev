@@ -95,11 +95,11 @@ nav {
 
 .nav-btn, .contact-btn, .contact-btn button{
   font-size: 1em;
-  margin-top: 1em;
   z-index: 10;
 }
 
 .nav-btn {
+  margin-top: 0.5em;
   background-color: transparent;
   border: none;
   color: var(--md-gray);
@@ -429,7 +429,7 @@ main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: start;
   justify-content: center;
 }
 
@@ -441,6 +441,7 @@ main {
 
 .project-container img {
   width: 12rem;
+  object-fit: cover;
   border: 3px solid var(--dk-gray); 
   border-radius: 5px;
 }
@@ -454,9 +455,20 @@ main {
   border-radius: 5px;
   border-bottom: 2px solid var(--dk-purple);
   border-left: 2px solid var(--dk-purple);
-  box-shadow: 0 0 2px;
+  box-shadow: 0 0 2px var(--dk-purple);
   color: var(--dk-purple);
   margin: 0 0.5rem;
+}
+
+.project-btn:disabled, .project-btn:disabled:hover, .project-btn:disabled:active {
+  border-bottom: 2px solid var(--md-gray);
+    border-left: 2px solid var(--md-gray);
+    box-shadow: 0 0 2px var(--md-gray);
+    border-top: none;
+      border-right: none;
+    color: var(--md-gray);
+    cursor: default;
+    background-color: white;
 }
 
 .project-btn:hover {
@@ -721,6 +733,9 @@ nav {
       font-size: 24px;
     }
 
+    .nav-btn {
+      margin: 1em 0;
+    }
 
   nav .dialog-decoration {
     display: block;
@@ -733,5 +748,9 @@ nav {
   .page:not(.welcome-page) {
     padding: 1rem 2.5rem 0 4.5rem;
     
+  }
+
+  .btn-brush .btn {
+    font-size: 1.4rem
   }
 }
