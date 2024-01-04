@@ -26,7 +26,7 @@ class Certificate {
 
 
 const cs50= new Certificate(
-    "CS50",
+    "CS50, Harvard University",
     "Harvard University",
   "",
   "https://pll.harvard.edu/course/cs50-introduction-computer-science",
@@ -67,7 +67,7 @@ const oopProgramming = new Certificate(
   "",
   "https://codewithmosh.com/p/object-oriented-programming-in-javascript",
   "/OOP_JS_cert.png",
-  "Javascript course focusing on Object-Oriented Programming."
+  "Javascript course focusing on object-oriented Programming."
 );
 
 const fccJavascript = new Certificate(
@@ -76,7 +76,7 @@ const fccJavascript = new Certificate(
   "",
   "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/",
   "/FCC_Javascript.png",
-  "Project-based course focusing on using CSS and HTML to create responsive web applications."
+  "In-depth Javascript course focusing on functional programming, object-oriented programming, and complex algorithms."
 );
 
 
