@@ -1,5 +1,6 @@
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
+import { contactArr } from "../../data/contactLinkData";
 
 interface iContact {
     dialogOpen: boolean;
@@ -8,6 +9,7 @@ interface iContact {
 
 const Contact = ({ handleDialog, dialogOpen }: iContact) => {
     
+  const [copyMsg, setCopyMsg] = useState('');
     const dialogRef = useRef<HTMLDivElement>(null);
 
 
@@ -24,6 +26,20 @@ const Contact = ({ handleDialog, dialogOpen }: iContact) => {
            }
         handleDialog(false)
     };
+  
+  const showCopyMsg = (type: string, text: string) => {
+    setCopyMsg(type);
+    navigator.clipboard.writeText(text);
+  }
+
+  // remove copy msg after 2 sec
+  useEffect(() => {
+    if (copyMsg) {
+      setTimeout(() => {
+        setCopyMsg('')
+      }, 2000)
+    }
+  }, [copyMsg])
 
 if (!dialogOpen) return
 
@@ -39,32 +55,27 @@ if (!dialogOpen) return
         </button>
         <h1>Contact me</h1>
         <ul>
-          <li>
-            <span className="dialog-brush">Email</span> njhaus@gmail.com
-          </li>
-          <li>
-            <span className="dialog-brush">Phone</span> (913) 203-0504
-          </li>
+          {contactArr.map((contact, i) => (
+            <li key={i}>
+              {copyMsg === contact.type && <span className="copy-msg">Copied to clipboard!</span>}
+              <span className="dialog-brush" onClick={() => showCopyMsg(contact.type, contact.text)}>
+                <span>{ contact.type}</span>
+              </span>{" "}
+              {contact.text}
+            </li>
+          ))}
           <li>
             <a
               className="dialog-brush"
               href="https://www.linkedin.com/in/nicholas-haus-b8b58b277/"
               target="_blank"
             >
-              LinkedIn
+              <span>LinkedIn</span>
             </a>{" "}
             Nicholas Haus
           </li>
-          <li>
-            <span className="dialog-brush">
-              Discord
-            </span>{" "}
-            njhaus
-          </li>
         </ul>
         <p>Looking forward to hearing from you!</p>
-        <div className="dialog-decoration"></div>
-        <div className="dialog-decoration"></div>
         <div className="dialog-decoration"></div>
       </div>
     </div>

@@ -7,7 +7,8 @@ const Resume = () => {
       <object
         className="resume"
         type="application/pdf"
-        data="../../public/CS50_certificate.pdf"
+        // Data linke this way won't work during dev, but needs to be like this to work in production
+        data="/CS50_certificate.pdf"
       ></object>
       <p>
         PDF not loading?{" "}

@@ -174,15 +174,15 @@ nav {
 }
 
 .dialog p {
-  margin-top: 6rem;
+  margin-top: 5rem;
   color: white;
   font-size: 1.25rem;
-  padding: 0 2rem;
+  padding: 0 4rem;
   font-weight: 600;
 }
 
 .dialog ul{
-  margin: 2rem;
+  margin: 1.5rem 2rem;
   padding: 0;
   text-align: left;
 }
@@ -191,21 +191,37 @@ nav {
   list-style-type: none;
   margin: 1rem 0;
   padding: 0;
+  position: relative;
 }
 
 .dialog-brush {
-  height: fit-content;
-    width: fit-content;
+  display: inline-block;
+  height: 2rem;
+    width: 6.5rem;
     -webkit-mask-image: url('./assets/paintstripe.png');
     mask-image: url('./assets/paintstripe.png');
     mask-size: contain;
     mask-position: center;
     mask-repeat: no-repeat;
     position: relative;
-    padding: 2rem 2.5rem 2.25rem 2rem;
+    /* padding: 2rem 2.5rem 2.25rem 2rem; */
     background-color: var(--dk-purple);
     color: white;
     margin-right: 1rem;
+    cursor: pointer;
+}
+
+.dialog-brush:hover {
+  background-color: var(--md-purple);
+}
+
+.dialog-brush:active {
+  background-color: var(--lt-teal);
+}
+
+.dialog-brush span {
+  display: inline-block;
+  padding: 0.25rem 1rem;
 }
 
 .dialog-decoration {
@@ -217,9 +233,16 @@ nav {
     mask-repeat: no-repeat;
     position: absolute;
     transform: scaleX(-1);
-    top: 17rem;
+    top: 18rem;
     left: -20rem;
     background-color: var(--lt-teal);
+}
+
+.copy-msg {
+  position: absolute;
+  color: var(--dk-gray);
+  top: -1.25rem;
+  z-index: 1;
 }
 
 /* Main */
