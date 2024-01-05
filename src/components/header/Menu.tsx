@@ -18,6 +18,7 @@ const Menu = ({ handlePage, currPage, handleDialog, showMenu, handleMenu}: iMenu
       <button className="dialog-close menu-close" onClick={() => handleMenu()}>
         &#x2715;
       </button>
+      <h2>Menu</h2>
       {pageData.map((page, i) => (
         <button
           key={i}
