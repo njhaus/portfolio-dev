@@ -99,6 +99,10 @@ nav {
   z-index: 10;
 }
 
+.nav-menu h2 {
+  display: none;
+}
+
 .nav-btn {
   margin-top: 0.5em;
   background-color: transparent;
@@ -263,11 +267,14 @@ nav .dialog-decoration {
 
 main {
   width: 100%;
+  height: fit-content;
   background-color: transparent;
   display: flex;
   flex-direction: row;
   color: var(--dk-gray);
-    height: 38rem;
+  
+  /* overflow-x: hidden; */
+    
 }
 
 .side-menu-section {
@@ -372,6 +379,7 @@ main {
   width: 70%;
   max-width: 900px;
   padding: 0 3rem;
+  overflow-x: visible;
 }
 
 .page-overlay {
@@ -389,6 +397,7 @@ main {
   position: absolute;
   top: 0;
   z-index: 0;
+  overflow-x: visible;
 }
 
 .page {
@@ -617,7 +626,8 @@ nav {
       color: var(--dk-gray)
   }   
 
-  .show-menu h2 {
+  .nav-menu h2 {
+    display: block;
     font-weight: 300;
   }
 
@@ -643,6 +653,7 @@ nav {
     padding: 0.5em;
     margin-top: -0.5em;
   }
+
 }
 
 
@@ -661,7 +672,7 @@ nav {
   main {
     display: block;
     overflow-x: hidden;
-    height: 100%;
+    height: calc(100% - 13rem);
   }
 
   /* side menu */
@@ -720,7 +731,6 @@ nav {
 .dialog {
   height: 100%;
   width: 100%;
-  /* top: 40%; */
   
 }
 
@@ -771,19 +781,19 @@ nav {
 
 @media screen and (max-width: 550px) and (orientation: portrait) {
 
-  .page {
-  padding-left: 2.5rem;
-  height: calc(100vh - 13rem);
+.page {
+    padding-left: 2.5rem;
+    height: calc(100vh - 13rem);
   }
 
   .page-overlay {
-  height: calc(100vh - 4rem);
-  margin-left: 1rem;
+    height: calc(100vh - 4rem);
+    margin-left: 1rem;
   }
 
-  .welcome-page {
-    margin-top: 1rem;
-    padding-left: 4.5rem;
-    padding-right: 1rem;
-  }
+      .welcome-page {
+        margin-top: 1rem;
+        padding-left: 4.5rem;
+        padding-right: 1rem;
+      }
 }
