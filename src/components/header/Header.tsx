@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import Logo from "../parts/Logo"
 import Menu from "./Menu"
+import MainImg from "../parts/MainImg";
 
 
 interface iHeader {
@@ -22,7 +23,9 @@ const Header = ({ handlePage, currPage, handleDialog }: iHeader) => {
 
   return (
     <header>
-      <div className="header-section"></div>
+      <div className="header-section">
+        <MainImg/>
+      </div>
       <Logo handlePage={handlePage} />
       <div className="header-btn-container header-section">
         <div className="btn-brush menu-btn">

@@ -266,22 +266,11 @@ nav .dialog-decoration {
 /* Main */
 
 main {
+  position: relative;
   width: 100%;
-  height: fit-content;
-  background-color: transparent;
-  display: flex;
-  flex-direction: row;
-  color: var(--dk-gray);
-  
-  /* overflow-x: hidden; */
-    
-}
-
-.side-menu-section {
-  width: 30%;
   height: 38rem;
-  min-width: 360px;
-  overflow-y: hidden;
+  background-color: transparent;
+  color: var(--dk-gray);
 }
 
 .main-img-container {
@@ -321,9 +310,14 @@ main {
 /* Side Menu */
 
 .side-menu-section {
+  position: absolute;
+  width: 30%;
   height: 38rem;
-  margin-top: 0.5rem;
+  min-width: 360px;
   overflow-y: hidden;
+  top: 0.5rem;
+  left: 0;
+  z-index: 4;
 }
 
 .side-menu-container {
@@ -374,8 +368,10 @@ main {
 
 .page-section {
   background-color: transparent;
-  position: relative;
+  position: absolute;
   font-family: var(--main-font);
+  right: 0;
+  height: 38rem;
   width: 70%;
   max-width: 900px;
   padding: 0 3rem;
@@ -660,7 +656,7 @@ nav {
 
 /* Mobile-friendly layout */
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 750px) {
 
   body {
       margin: 0;

@@ -69,7 +69,6 @@ const pageData = [
       />
       <Contact handleDialog={handleDialog} dialogOpen={contactDialog} />
       <main>
-        <MainImg />
         <SideMenu handlePage={handlePage} />
         <PageContainer currPage={currPage} pageData={pageData} />
       </main>
