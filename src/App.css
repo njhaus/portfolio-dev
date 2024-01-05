@@ -798,7 +798,7 @@ nav {
 @media screen and (max-height: 550px) and (orientation: landscape) {
     .dialog-overlay {
         width: 100vw;
-        height: 100vh;
+        height: 100%;
         position: absolute;
         top: 0;
         left: 0;
