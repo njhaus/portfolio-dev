@@ -2,7 +2,6 @@
 import Header from './components/header/Header';
 import SideMenu from './components/sidemenu/SideMenu';
 import PageContainer from './components/pages/PageContainer';
-import MainImg from './components/parts/MainImg';
 import Footer from './components/Footer';
 import Portfolio from './components/pages/Portfolio';
 import Welcome from './components/pages/Welcome';
