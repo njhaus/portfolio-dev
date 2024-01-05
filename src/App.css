@@ -551,7 +551,7 @@ main {
 /* About page */
 
 .about-page {
-  margin-left: 1rem;
+  margin-left: 3rem;
   padding: 3rem 6rem;
   overflow-x: scroll;
   line-height: 1.5rem;
@@ -674,7 +674,7 @@ nav {
 
   .page {
   padding-left: 2.5rem;
-  height: calc(100vh - 4rem);
+  height: calc(100vh - 13rem);
   }
 
   .page-overlay {
@@ -703,8 +703,13 @@ nav {
   }
 
 
+.about-page {
+  margin-left: 1rem;
+}
+
   .dialog {
   position: absolute;
+  display: none;
   top: 0;
   left: 5px;
   width: 100vw;
