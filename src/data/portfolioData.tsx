@@ -53,7 +53,7 @@ const yelpcamp = new PortfolioProject(
     "https://yelpcamp-tykm.onrender.com/",
     '/yelpcamp-img.png',
   'A full-stack website created with Node, Express, MongoDB and EJS.',
-  ['EJS', 'Node', "MongoDB", "Express"]
+  ['EJS', 'Node', "MongoDB", "Express", "Bootstrap"]
 );
 const christmasListMaker = new PortfolioProject(
   "Christmas List Maker (Front End)",
@@ -93,7 +93,7 @@ const colorMaze = new PortfolioProject(
   "https://njhaus.github.io/color-maze/",
   '/colors-maze-img.png',
   "An online game built with Javascript, Bootstrap, CSS and HTML.",
-  ["Bootstrap", "CSS", "HTML"]
+  ["Javascript", "Bootstrap", "CSS", "HTML"]
 );
 const homepage = new PortfolioProject(
   "Homepage",

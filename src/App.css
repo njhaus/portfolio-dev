@@ -551,9 +551,11 @@ main {
 /* About page */
 
 .about-page {
-  padding: 0 4rem;
+  margin-left: 1rem;
+  padding: 3rem 6rem;
+  overflow-x: scroll;
+  line-height: 1.5rem;
 }
-
 
 /* Footer */
 
@@ -672,11 +674,11 @@ nav {
 
   .page {
   padding-left: 2.5rem;
-  height: calc(100vh - 10rem);
+  height: calc(100vh - 4rem);
   }
 
   .page-overlay {
-  height: calc(100vh - 10rem);
+  height: calc(100vh - 4rem);
   margin-left: 1rem;
   }
 

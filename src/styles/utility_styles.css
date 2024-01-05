@@ -47,3 +47,7 @@ button {
     background-color: transparent;
     color: white;
 }
+
+.bold {
+    font-weight: 600;
+}

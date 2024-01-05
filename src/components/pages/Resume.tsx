@@ -14,7 +14,7 @@ const Resume = () => {
       <p>
         PDF not loading?{" "}
         <a
-          href={ResumePDF}
+          href='/pdf-temp-img.png'
           target="_blank"
         >
           Click here
