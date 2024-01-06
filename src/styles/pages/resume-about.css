@@ -1,0 +1,18 @@
+/* Resume */
+
+.resume {
+    width: 70%;
+    aspect-ratio: 3/2.75;
+    margin-top: -1rem;
+    border-bottom: 3px solid var(--obj-gray);
+}
+
+
+/* About page */
+
+.about-page {
+    margin-left: 3rem;
+    padding: 3rem 6rem;
+    overflow-x: scroll;
+    line-height: 1.5rem;
+}

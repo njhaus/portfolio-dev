@@ -1,3 +1,15 @@
+/* Typeology */
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1;
+    font-weight: 300;
+}
+
+.bold {
+    font-weight: 600;
+}
+
 /* Buttons */
 
 button {
@@ -46,8 +58,4 @@ button {
     margin: 0.5rem 2rem 0.75rem 1rem;
     background-color: transparent;
     color: white;
-}
-
-.bold {
-    font-weight: 600;
 }
