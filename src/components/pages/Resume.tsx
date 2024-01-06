@@ -1,4 +1,4 @@
-import ResumePDF from "../../../public/resume-temp-24.pdf";
+import ResumePDF from "../../../public/resume-24.pdf";
 
 const Resume = () => {
   return (
@@ -14,7 +14,7 @@ const Resume = () => {
       <p>
         PDF not loading?{" "}
         <a
-          href='/pdf-temp-img.png'
+          href='/resume-24-img.jpg'
           target="_blank"
         >
           Click here
