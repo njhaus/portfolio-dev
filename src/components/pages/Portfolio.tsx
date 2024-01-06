@@ -13,11 +13,15 @@ const Portfolio = () => {
     console.log(projects[scrollTo + 1]);
     if ((scrollTo + 1) < projects.length) {
       console.log('scrolling')
-      projects[scrollTo + 1].scrollIntoView({ behavior: "smooth", block: "center", inline: "center" }); 
+      projects[scrollTo + 1].scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "end",
+      }); 
       setScrollTo(scrollTo + 1);
     } 
     else {
-      projects[0].scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+      projects[0].scrollIntoView({ behavior: "smooth", block: "end", inline: "end" });
       setScrollTo(0);
     }
   }

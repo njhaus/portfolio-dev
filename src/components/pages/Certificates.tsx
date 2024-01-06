@@ -19,15 +19,15 @@ const Certificates = () => {
     if (scrollTo + 1 < certificates.length) {
       certificates[scrollTo + 1].scrollIntoView({
         behavior: "smooth",
-        block: "center",
-        inline: "center",
+        block: "start",
+        inline: "end",
       });
       setScrollTo(scrollTo + 1);
     } else {
       certificates[0].scrollIntoView({
         behavior: "smooth",
-        block: "center",
-        inline: "center",
+        block: "end",
+        inline: "end",
       });
       setScrollTo(0);
     }
