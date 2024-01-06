@@ -15,7 +15,7 @@ const Portfolio = () => {
       setScrollTo(scrollTo + 1);
     } 
     else {
-      projects[0].scrollIntoView({ behavior: "smooth" });
+      projects[0].scrollIntoView({ behavior: "smooth"});
       setScrollTo(0);
     }
   }
