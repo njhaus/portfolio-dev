@@ -115,3 +115,11 @@
 .lightteal {
     background-color: var(--lt-teal);
 }
+
+.scroll {
+    position: sticky;
+    bottom: 2rem;
+    float: right;
+    margin-right: 1rem;
+    cursor: pointer;
+}
