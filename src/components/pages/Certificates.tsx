@@ -17,10 +17,18 @@ const Certificates = () => {
     
     console.log(certificates)
     if (scrollTo + 1 < certificates.length) {
-      certificates[scrollTo + 1].scrollIntoView({ behavior: "smooth" });
+      certificates[scrollTo + 1].scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center",
+      });
       setScrollTo(scrollTo + 1);
     } else {
-      certificates[0].scrollIntoView({ behavior: "smooth" });
+      certificates[0].scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center",
+      });
       setScrollTo(0);
     }
   };

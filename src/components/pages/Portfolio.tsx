@@ -10,12 +10,14 @@ const Portfolio = () => {
   const handleScroll = () => {
     const projectContainer = document.getElementById("portfolio-container");
     const projects = projectContainer?.children ? Array.from(projectContainer?.children) : [];
+    console.log(projects[scrollTo + 1]);
     if ((scrollTo + 1) < projects.length) {
-      projects[scrollTo + 1].scrollIntoView({ behavior: "smooth" }); 
+      console.log('scrolling')
+      projects[scrollTo + 1].scrollIntoView({ behavior: "smooth", block: "center", inline: "center" }); 
       setScrollTo(scrollTo + 1);
     } 
     else {
-      projects[0].scrollIntoView({ behavior: "smooth"});
+      projects[0].scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
       setScrollTo(0);
     }
   }
