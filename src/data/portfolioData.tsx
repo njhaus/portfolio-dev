@@ -59,9 +59,9 @@ const christmasListMaker = new PortfolioProject(
   "Christmas List Maker (Front End)",
   "https://github.com/njhaus/christmas-list-maker",
   "https://christmas-list-maker-production.up.railway.app/",
-    '/christmas-list-maker-img.png',
-  'The front end of a full-stack web application created with React, Typescript, and Material UI',
-  ['React', 'Typescript', 'MaterialUI']
+  "/christmas-list-maker-img.png",
+  "The front end of a full-stack web application created with React, Typescript, and Material UI",
+  ["React", "Typescript", "MaterialUI", "Node", "Express", "SQLite"]
 );
 // const christmasListMakerApi = new PortfolioProject(
 //   "Christmas List Maker (Back End)",
