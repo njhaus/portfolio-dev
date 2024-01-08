@@ -50,10 +50,10 @@ class PortfolioProject {
 const yelpcamp = new PortfolioProject(
   "YelpCamp",
   "https://github.com/njhaus/yelpcamp",
-    "https://yelpcamp-tykm.onrender.com/",
-    '/yelpcamp-img.png',
-  'A full-stack website created with Node, Express, MongoDB and EJS.',
-  ['EJS', 'Node', "MongoDB", "Express", "Bootstrap"]
+  "https://yelpcamp-production-c045.up.railway.app/home/",
+  "/yelpcamp-img.png",
+  "A full-stack website created with Node, Express, MongoDB and EJS.",
+  ["EJS", "Node", "MongoDB", "Express", "Bootstrap"]
 );
 const christmasListMaker = new PortfolioProject(
   "Christmas List Maker (Front End)",
@@ -113,4 +113,4 @@ const emWaves = new PortfolioProject(
 );
 
 
-export const portfolioData = [yelpcamp, christmasListMaker, christmasListMakerApi, findMeTrees, hotn, colorMaze, homepage, emWaves]
+export const portfolioData = [yelpcamp, christmasListMaker, findMeTrees, hotn, colorMaze, homepage, emWaves]
