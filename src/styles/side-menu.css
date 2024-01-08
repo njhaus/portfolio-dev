@@ -1,0 +1,56 @@
+/* Side Menu */
+
+.side-menu-section {
+    position: absolute;
+    width: 30%;
+    height: 38rem;
+    min-width: 360px;
+    overflow-y: hidden;
+    top: 0.5rem;
+    left: 0;
+    z-index: 4;
+}
+
+.side-menu-container {
+    height: 25rem;
+    width: 30rem;
+    -webkit-mask-image: url('../assets/brushmaskflip.png');
+    mask-image: url('../assets/brushmaskflip.png');
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -7rem;
+    pointer-events: none;
+}
+
+.side-menu-container:not(:first-of-type) {
+    margin-top: -17rem;
+}
+
+.side-menu-container:nth-of-type(1n),
+.side-menu-container:nth-of-type(n + 3) {
+    background-color: var(--dk-purple);
+}
+
+.side-menu-container:nth-of-type(2),
+.side-menu-container:nth-of-type(2n + 3) {
+    background-color: var(--lt-teal);
+}
+
+.side-menu-container:nth-of-type(3n) {
+    background-color: var(--md-red);
+}
+
+.side-menu-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+    pointer-events: all;
+    font-family: var(--fancy-font);
+}

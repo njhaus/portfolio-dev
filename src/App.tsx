@@ -14,8 +14,9 @@ import Certificates from './components/pages/Certificates';
 import './App.css'
 import './styles/utility_styles.css'
 import './styles/animations.css'
-// Header, contact me dialog, footer
+// Header, contact me dialog, footer, main img
 import './styles/header.css'
+import "./styles/side-menu.css";
 // main section, pages container
 import './styles/pages/pages.css'
 // Individual pages
