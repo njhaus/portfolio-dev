@@ -56,7 +56,7 @@ const yelpcamp = new PortfolioProject(
   ["EJS", "Node", "MongoDB", "Express", "Bootstrap"]
 );
 const christmasListMaker = new PortfolioProject(
-  "Christmas List Maker (Front End)",
+  "Christmas List Maker",
   "https://github.com/njhaus/christmas-list-maker",
   "https://christmas-list-maker-production.up.railway.app/",
   "/christmas-list-maker-img.png",
