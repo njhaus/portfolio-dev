@@ -1,4 +1,3 @@
-import ResumePDF from "../../../public/resume-24.pdf";
 
 const Resume = () => {
   return (
