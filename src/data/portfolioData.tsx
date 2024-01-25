@@ -75,7 +75,7 @@ const findMeTrees = new PortfolioProject(
   "Find Me Trees",
   "https://github.com/njhaus/find-me-trees2",
   "https://find-me-trees-client-production.up.railway.app/",
-  "/find-me-trees-img.png",
+  "/find-me-trees-img2.png",
   "A MERN stack web application including Typescript and Chakra UI.",
   ["React", "Typescript", "MongoDB", "Express", "Node", "ChakraUI"]
 );
