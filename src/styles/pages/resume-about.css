@@ -2,9 +2,24 @@
 
 .resume {
     width: 70%;
-    aspect-ratio: 3/2.75;
+    object-fit: contain;
     margin-top: -1rem;
     border-bottom: 3px solid var(--obj-gray);
+}
+
+.resume-img-container {
+    position: relative
+}
+
+.img-click {
+    position: absolute;
+    top: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    background-color: #ffffff99;
+    border-radius: 5px;
+    padding: 0.25rem 0.5rem
 }
 
 
@@ -16,3 +31,4 @@
     overflow-x: scroll;
     line-height: 1.5rem;
 }
+

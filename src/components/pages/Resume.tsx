@@ -4,23 +4,15 @@ const Resume = () => {
   return (
     <div className="resume-container page">
       <h1>Résumé</h1>
-      <object
-        className="resume"
-        id="resume"
-        type="application/pdf"
-        // Data linke this way won't work during dev, but needs to be like this to work in production
-        data={ResumePDF}
-      ></object>
-      <p>
-        PDF not loading?{" "}
-        <a
-          href='/resume-24-img.png'
-          target="_blank"
-        >
-          Click here
-        </a>{" "}
-        to open the file in another tab.
-      </p>
+      <div className="resume-img-container">
+        <a href="/resume-24-img.png" target="_blank">
+          <img className="resume" id="resume" src="/resume-24-img.png"></img>
+        </a>
+        <p className="click-through img-click">Click to enlarge &#128269;</p>
+      </div>
+      <a href="/resume-24.pdf" download="nick.haus.resume.pdf">
+        Download PDF
+      </a>
     </div>
   );
 };

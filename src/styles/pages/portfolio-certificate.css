@@ -80,42 +80,6 @@
     padding: 0 0.5rem;
 }
 
-.yellow {
-    background-color: var(--yellow);
-}
-
-.blue {
-    background-color: blue;
-}
-
-.teal {
-    background-color: var(--dk-teal);
-}
-
-.red {
-    background-color: var(--md-red);
-}
-
-.purple {
-    background-color: var(--dk-purple);
-}
-
-.gray {
-    background-color: var(--md-gray);
-}
-
-.darkgray {
-    background-color: var(--dk-gray);
-}
-
-.lightpurple {
-    background-color: var(--md-purple);
-}
-
-.lightteal {
-    background-color: var(--lt-teal);
-}
-
 .scroll {
     position: sticky;
     bottom: 2rem;

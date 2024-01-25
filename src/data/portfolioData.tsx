@@ -74,10 +74,10 @@ const christmasListMaker = new PortfolioProject(
 const findMeTrees = new PortfolioProject(
   "Find Me Trees",
   "https://github.com/njhaus/find-me-trees2",
-  "https://github.com/njhaus/find-me-trees2",
-    '/temp-img.png',
-  "(Under construction) A MERN stack web application including Typescript and Chakra UI.",
-['React', 'Typescript', 'MongoDB', "Express", "Node", "ChakraUI"]
+  "https://find-me-trees-client-production.up.railway.app/",
+  "/find-me-trees-img.png",
+  "A MERN stack web application including Typescript and Chakra UI.",
+  ["React", "Typescript", "MongoDB", "Express", "Node", "ChakraUI"]
 );
 const hotn = new PortfolioProject(
   "Hosts of the Night Companion App",
@@ -113,4 +113,12 @@ const emWaves = new PortfolioProject(
 );
 
 
-export const portfolioData = [yelpcamp, christmasListMaker, findMeTrees, hotn, colorMaze, homepage, emWaves]
+export const portfolioData = [
+  findMeTrees,
+  christmasListMaker,
+  yelpcamp,
+  hotn,
+  colorMaze,
+  homepage,
+  emWaves,
+];
