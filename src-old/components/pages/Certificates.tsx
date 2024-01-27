@@ -1,12 +1,9 @@
 import { useState } from "react";
 
-
 import Certificate from "./certificates/Certificate";
-import { certificates } from "../../data/certificateData";
+import { certificates } from "../../../src/data/certificateData";
 
 const Certificates = () => {
-
-
   const [scrollTo, setScrollTo] = useState(0);
 
   const handleScroll = () => {
@@ -14,8 +11,8 @@ const Certificates = () => {
     const certificates = certificateContainer?.children
       ? Array.from(certificateContainer?.children)
       : [];
-    
-    console.log(certificates)
+
+    console.log(certificates);
     if (scrollTo + 1 < certificates.length) {
       certificates[scrollTo + 1].scrollIntoView({
         behavior: "smooth",
@@ -32,7 +29,6 @@ const Certificates = () => {
       setScrollTo(0);
     }
   };
-
 
   return (
     <div className="page">
@@ -56,6 +52,6 @@ const Certificates = () => {
       </p>
     </div>
   );
-}
+};
 
-export default Certificates
+export default Certificates;

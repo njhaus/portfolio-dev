@@ -1,18 +1,21 @@
-import { pageData } from "../../data/pageData";
+import { pageData } from "../../../src/data/pageData";
 import ContactMe from "./ContactMe";
-
 
 interface iMenu {
   handlePage: (ind: number) => void;
   currPage: number;
   handleDialog: (set: boolean) => void;
   showMenu: boolean;
-  handleMenu: () => void
+  handleMenu: () => void;
 }
 
-
-const Menu = ({ handlePage, currPage, handleDialog, showMenu, handleMenu}: iMenu) => {
-
+const Menu = ({
+  handlePage,
+  currPage,
+  handleDialog,
+  showMenu,
+  handleMenu,
+}: iMenu) => {
   return (
     <nav className={showMenu ? "nav-menu show-menu" : "nav-menu"}>
       <button className="dialog-close menu-close" onClick={() => handleMenu()}>

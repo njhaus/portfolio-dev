@@ -1,4 +1,4 @@
-import { iPageData } from "../../App";
+import { iPageData } from "../../../src/App";
 
 interface iPageContainer {
   currPage: number;
@@ -6,13 +6,12 @@ interface iPageContainer {
 }
 
 const PageContainer = ({ currPage, pageData }: iPageContainer) => {
-
   return (
     <section className="page-section">
       {pageData[currPage].component}
       <div className="page-overlay"></div>
     </section>
   );
-}
+};
 
-export default PageContainer
+export default PageContainer;

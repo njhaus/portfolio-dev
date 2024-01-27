@@ -1,14 +1,12 @@
-import { pageData } from "../../data/pageData";
+import { pageData } from "../../../src/data/pageData";
 import MenuButton from "./MenuButton";
-
 
 interface iSideMenu {
   handlePage: (ind: number) => void;
 }
 
-const SideMenu = ({ handlePage}: iSideMenu) => {
-
-  const linkData = pageData.slice(1)
+const SideMenu = ({ handlePage }: iSideMenu) => {
+  const linkData = pageData.slice(1);
 
   return (
     <section className="side-menu-section">
@@ -19,9 +17,9 @@ const SideMenu = ({ handlePage}: iSideMenu) => {
           handlePage={handlePage}
           i={i + 1}
         ></MenuButton>
-        ))}
+      ))}
     </section>
   );
-}
+};
 
-export default SideMenu
+export default SideMenu;

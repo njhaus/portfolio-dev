@@ -1,5 +1,5 @@
 import Pill from "../../parts/Pill";
-import { textColorMap } from "../../../data/portfolioData";
+import { textColorMap } from "../../../../src/data/portfolioData";
 
 interface iProject {
   title: string;
@@ -10,12 +10,14 @@ interface iProject {
   pills: (keyof typeof textColorMap)[];
 }
 
-const Project = ({title,
-    githubLink,
-    liveLink,
-    img,
-    desc,
-  pills}: iProject) => {
+const Project = ({
+  title,
+  githubLink,
+  liveLink,
+  img,
+  desc,
+  pills,
+}: iProject) => {
   return (
     <div className="project-container">
       <img src={img}></img>
@@ -41,6 +43,6 @@ const Project = ({title,
       </div>
     </div>
   );
-}
+};
 
-export default Project
+export default Project;

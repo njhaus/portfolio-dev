@@ -1,47 +1,44 @@
-
 import { useRef, useState, useEffect } from "react";
-import { contactArr } from "../../data/contactLinkData";
+import { contactArr } from "../../../src/data/contactLinkData";
 
 interface iContact {
-    dialogOpen: boolean;
-    handleDialog: (set: boolean) => void;
+  dialogOpen: boolean;
+  handleDialog: (set: boolean) => void;
 }
 
 const Contact = ({ handleDialog, dialogOpen }: iContact) => {
-    
-  const [copyMsg, setCopyMsg] = useState('');
-    const dialogRef = useRef<HTMLDivElement>(null);
+  const [copyMsg, setCopyMsg] = useState("");
+  const dialogRef = useRef<HTMLDivElement>(null);
 
+  const stopCloseDialog = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    e.stopPropagation();
+    if (
+      //    @ts-ignore
+      // This is the only way i was able to stop the event from propagating -- stop propagation didn't work and useing a ref to match the e.target didn't work.
+      // Had to spread the classList beacuse it produces a DOMtokenList and not an array, which means I couldn't use includes() on it until I made it an array
+      ![...e.target.classList].includes("dialog-overlay")
+    ) {
+      // Inside the dialog, do nothing
+      return;
+    }
+    handleDialog(false);
+  };
 
-    const stopCloseDialog = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        e.stopPropagation()
-        if (
-            //    @ts-ignore
-            // This is the only way i was able to stop the event from propagating -- stop propagation didn't work and useing a ref to match the e.target didn't work.
-            // Had to spread the classList beacuse it produces a DOMtokenList and not an array, which means I couldn't use includes() on it until I made it an array
-               ![...e.target.classList].includes('dialog-overlay')
-           ) {
-             // Inside the dialog, do nothing
-             return;
-           }
-        handleDialog(false)
-    };
-  
   const showCopyMsg = (type: string, text: string) => {
     setCopyMsg(type);
     navigator.clipboard.writeText(text);
-  }
+  };
 
   // remove copy msg after 2 sec
   useEffect(() => {
     if (copyMsg) {
       setTimeout(() => {
-        setCopyMsg('')
-      }, 2500)
+        setCopyMsg("");
+      }, 2500);
     }
-  }, [copyMsg])
+  }, [copyMsg]);
 
-if (!dialogOpen) return
+  if (!dialogOpen) return;
 
   return (
     <div className="dialog-overlay" onClick={(e) => stopCloseDialog(e)}>
@@ -57,9 +54,14 @@ if (!dialogOpen) return
         <ul>
           {contactArr.map((contact, i) => (
             <li key={i}>
-              {copyMsg === contact.type && <span className="copy-msg">Copied to clipboard!</span>}
-              <span className="dialog-brush" onClick={() => showCopyMsg(contact.type, contact.text)}>
-                <span>{ contact.type}</span>
+              {copyMsg === contact.type && (
+                <span className="copy-msg">Copied to clipboard!</span>
+              )}
+              <span
+                className="dialog-brush"
+                onClick={() => showCopyMsg(contact.type, contact.text)}
+              >
+                <span>{contact.type}</span>
               </span>{" "}
               {contact.text}
             </li>
@@ -80,6 +82,6 @@ if (!dialogOpen) return
       </div>
     </div>
   );
-}
+};
 
-export default Contact
+export default Contact;

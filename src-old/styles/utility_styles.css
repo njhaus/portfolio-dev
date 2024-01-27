@@ -10,6 +10,12 @@ h1 {
     font-weight: 600;
 }
 
+/* Click */
+
+.click-through {
+    pointer-events: none;
+}
+
 /* Buttons */
 
 button {
@@ -43,7 +49,8 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;       
+    position: relative;    
+    margin: 0 1rem;   
 }
 
 .btn-brush:hover {
@@ -56,6 +63,48 @@ button {
 
 .btn-brush button {
     margin: 0.5rem 2rem 0.75rem 1rem;
+    width: 6rem;
+    height: 4rem;
     background-color: transparent;
     color: white;
+    white-space: nowrap;
+}
+
+
+/* Colors */
+
+.yellow {
+    background-color: var(--yellow);
+}
+
+.blue {
+    background-color: blue;
+}
+
+.teal {
+    background-color: var(--dk-teal);
+}
+
+.red {
+    background-color: var(--md-red);
+}
+
+.purple {
+    background-color: var(--dk-purple);
+}
+
+.gray {
+    background-color: var(--md-gray);
+}
+
+.darkgray {
+    background-color: var(--dk-gray);
+}
+
+.lightpurple {
+    background-color: var(--md-purple);
+}
+
+.lightteal {
+    background-color: var(--lt-teal);
 }
