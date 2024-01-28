@@ -11,7 +11,7 @@ interface Sidebar {
 
 const Sidebar = ({pageText, currPage, handlePage}: Sidebar) => {
   return (
-    <aside className="bg-slate-200 h-full w-1/5 max-w-64">
+    <aside className="bg-slate-200 h-full w-1/5 max-w-64 relative">
       <MainImg />
       <ul className="inline-block min-w-40">
         {pageText.map((pg) => (
@@ -23,7 +23,7 @@ const Sidebar = ({pageText, currPage, handlePage}: Sidebar) => {
           />
         ))}
       </ul>
-      <div className="absolute bottom-2 left-2 flex gap-2 my-5 inline-block min-w-40">
+      <div className="absolute bottom-2 left-1/2 flex gap-2 my-5 min-w-40 -translate-x-1/2">
         <div className="bg-xLight border-main border rounded-full w-7 h-7"></div>
         <button
           className="h-8 bg-xLight border-main border rounded-lg flex-grow"
