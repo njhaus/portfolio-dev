@@ -20,7 +20,6 @@ const SideMenu = ({ pageText, currPage, pageNumber, handlePage }: Sidemenu) => {
           handlePage(pageNumber);
         }}
       >
-        <div></div>
         {pageText}
       </button>
     </div>

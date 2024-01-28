@@ -1,4 +1,4 @@
-import Welcome from '../pages/sections/Welcome'
+import Welcome from "../pages/sections/welcome/Welcome";
 import Portfolio from "../pages/sections/Portfolio";
 import AboutMe from "../pages/sections/AboutMe";
 import Resume from "../pages/sections/Resume";
@@ -23,11 +23,11 @@ export const pageData = [
     component: <Portfolio></Portfolio>,
   },
   {
-    pageText: "About Me",
-    component: <AboutMe></AboutMe>,
-  },
-  {
     pageText: "Certificates",
     component: <Certificates></Certificates>,
+  },
+  {
+    pageText: "About Me",
+    component: <AboutMe></AboutMe>,
   },
 ];
