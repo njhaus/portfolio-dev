@@ -11,9 +11,9 @@ interface Sidebar {
 
 const Sidebar = ({pageText, currPage, handlePage}: Sidebar) => {
   return (
-    <aside>
+    <aside className='bg-slate-200 h-full w-1/5 max-w-64'>
       <MainImg/>
-      <ul>
+      <ul className='inline-block min-w-44'>
         {pageText.map((pg) => (
           <SideMenu pageText={pg} currPage={currPage} pageNumber={pageText.indexOf(pg)} handlePage={handlePage} />
         ))}

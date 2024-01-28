@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .side-btn {
+        color: red;
+    }
+    .nav-btn {
+        color: blue
+    }
+    .main-btn {
+        background-color: blueviolet;
+    }
+    .section {
+        border: 1px solid black;
+    }
+}
+
+@layer utilities {
+    .hidden {
+        display: none;
+    }
+    .click-through {
+        pointer-events: none;
+    }
+    .h-1px {
+        height: 1px;
+    }
+}

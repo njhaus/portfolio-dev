@@ -13,10 +13,11 @@ const Nav = ({ pageText, currPage, handlePage }: Nav) => {
 
 
   return (
-    <nav>
-      <ul>
-        {pageText.map((pg) => (
+    <nav className="flex align-middle">
+      <ul className="flex gap-12 align-middle">
+        {pageText.map((pg, i) => (
           <NavItem
+            key={i}
             pageText={pg}
             currPage={currPage}
             pageNumber={pageText.indexOf(pg)}

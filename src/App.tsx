@@ -6,6 +6,8 @@ import Main from './pages/main/Main'
 
 import { pageData } from './data/pageData';
 
+import './App.css'
+
 
 function App() {
 
@@ -18,17 +20,21 @@ function App() {
   const pageText = pageData.map((page) => page.pageText);
   
   return (
-    <>
-      <Header pageText={pageText} currPage={currPage} handlePage={handlePage} />
-      <div className="main-container">
-        <Sidebar
+    <div className='flex w-full h-full'>
+      <Sidebar
+        pageText={pageText}
+        currPage={currPage}
+        handlePage={handlePage}
+      />
+      <div className="flex-col grow h-full">
+        <Header
           pageText={pageText}
           currPage={currPage}
           handlePage={handlePage}
         />
         <Main page={pageData[currPage]} />
       </div>
-    </>
+    </div>
   );
 }
 
