@@ -5,11 +5,11 @@ import MainImg from './components/MainImg'
 
 interface Sidebar {
     pageText: string[];
-    currPage: number;
-    handlePage: (page: number) => void;
+    welcomeScroll: number;
+    handleWelcomeScroll: (scroll: number) => void;
 }
 
-const Sidebar = ({pageText, currPage, handlePage}: Sidebar) => {
+const Sidebar = ({pageText, welcomeScroll, handleWelcomeScroll}: Sidebar) => {
   return (
     <aside className="bg-slate-200 h-full w-1/5 max-w-64 relative">
       <MainImg />
@@ -17,9 +17,9 @@ const Sidebar = ({pageText, currPage, handlePage}: Sidebar) => {
         {pageText.map((pg) => (
           <SideMenu
             pageText={pg}
-            currPage={currPage}
+            welcomeScroll={welcomeScroll}
             pageNumber={pageText.indexOf(pg)}
-            handlePage={handlePage}
+            handleWelcomeScroll={handleWelcomeScroll}
           />
         ))}
       </ul>

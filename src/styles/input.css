@@ -15,6 +15,7 @@
     .section {
         border: 1px solid black;
     }
+    
 }
 
 @layer utilities {
@@ -26,5 +27,8 @@
     }
     .h-1px {
         height: 1px;
+    }
+    .h-more {
+        height: calc(100vh + 7rem);
     }
 }

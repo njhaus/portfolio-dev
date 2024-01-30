@@ -1,15 +1,13 @@
-import React from 'react'
-
 interface Sidemenu {
   pageText: string;
-  currPage: number;
   pageNumber: number;
-  handlePage: (page: number) => void;
+  welcomeScroll: number;
+  handleWelcomeScroll: (scroll: number) => void;
 }
 
-const SideMenu = ({ pageText, currPage, pageNumber, handlePage }: Sidemenu) => {
+const SideMenu = ({ pageText, pageNumber, welcomeScroll, handleWelcomeScroll }: Sidemenu) => {
   
-  const clsName = currPage === pageNumber ? 'selected' : '';
+  const clsName = welcomeScroll === pageNumber ? 'selected' : '';
 
   return (
     <div className={`flex gap-2 my-5 ${clsName}`}>
@@ -17,7 +15,7 @@ const SideMenu = ({ pageText, currPage, pageNumber, handlePage }: Sidemenu) => {
       <button
         className="h-8 bg-xLight border-main border rounded-lg flex-grow"
         onClick={() => {
-          handlePage(pageNumber);
+          handleWelcomeScroll(pageNumber);
         }}
       >
         {pageText}

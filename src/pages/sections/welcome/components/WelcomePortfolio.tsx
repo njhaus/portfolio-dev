@@ -6,7 +6,7 @@ const WelcomePortfolio = () => {
   return (
     <>
       <Divider />
-      <h2 className="text-5xl font-medium w-full text-right max-w-2xl">
+      <h2 className="text-5xl font-medium w-full text-right max-w-2xl mt-8 ">
         Work you can trust.
       </h2>
       <p className="mx-12 max-w-2xl">

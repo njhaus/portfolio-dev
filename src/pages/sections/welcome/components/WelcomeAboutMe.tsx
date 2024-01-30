@@ -6,7 +6,7 @@ const WelcomeAboutMe = () => {
   return (
     <>
       <Divider />
-      <h2 className="text-5xl font-medium w-full text-right max-w-2xl">
+      <h2 className="text-5xl font-medium w-full text-right max-w-2xl mt-8 ">
         Thank you for visiting!
       </h2>
       <p className="mx-8 max-w-2xl">

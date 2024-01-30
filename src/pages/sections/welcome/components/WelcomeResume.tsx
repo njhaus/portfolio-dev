@@ -1,12 +1,10 @@
-import React from 'react'
-
 import Divider from "../../../../components/Divider";
 
 const WelcomeResume = () => {
   return (
     <>
       <Divider />
-      <h2 className="text-5xl font-medium w-full text-left max-w-2xl">
+      <h2 className="text-5xl font-medium w-full text-left max-w-2xl mt-8 ">
         Proven professionalism.
       </h2>
       <p className="mx-8 max-w-2xl">
