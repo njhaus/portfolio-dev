@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import { contactArr } from "../../../src/data/contactLinkData";
+import { contactArr } from "../data/contactLinkData"
 
 interface iContact {
   dialogOpen: boolean;

@@ -36,3 +36,8 @@ body {
   min-height: calc(100vh - 1rem);
 }
 
+::-webkit-scrollbar {
+  width: 2px;
+  /* background: transparent; */
+  /* make scrollbar transparent */
+}

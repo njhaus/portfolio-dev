@@ -2,8 +2,8 @@ import React from 'react'
 
 const Resume = () => {
   return (
-    <div className="w-4/5 h-more mt-5 mx-auto">
-      <h1 className="text-4xl my-3">Resume</h1>
+    <div className="w-4/5 h-more mt-5 mx-auto h-fit mb-72">
+      <h1 className="section-heading">Resume</h1>
       <div className="w-full relative h-full">
         <a href="/resume-24-img.png" target="_blank">
           <img

@@ -14,7 +14,7 @@ const WelcomeCertificates = () => {
         to be an asset to any developer team through numerous courses and
         diligent self-study. Click below to view my certificates.
       </p>
-      <button>View Certificates</button>
+      <button className="main-btn hover:main-hover">View Certificates</button>
     </>
   );
 }

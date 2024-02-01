@@ -1,5 +1,7 @@
-import Pill from "../../../../src/components/Pill";
-import { textColorMap } from "../../../../src/data/portfolioData";
+import React from "react";
+
+import Pill from "../../../../components/Pill"
+import { textColorMap } from "../../../../data/portfolioData";
 
 interface iProject {
   title: string;
@@ -19,24 +21,26 @@ const Project = ({
   pills,
 }: iProject) => {
   return (
-    <div className="project-container">
-      <img src={img}></img>
-      <h3>{title}</h3>
-      <div className="pills-container">
-        {pills.map((pill, i) => (
-          <Pill key={i} text={pill}></Pill>
-        ))}
+    <div className="w-64 flex flex-col justify-center align-top">
+      <div className="flex-grow">
+        <img className="project-img" src={img}></img>
+        <h3 className="project-heading">{title}</h3>
+        <div className="pills-container">
+          {pills.map((pill, i) => (
+            <Pill key={i} text={pill}></Pill>
+          ))}
+        </div>
+        <p className="my-2">{desc}</p>
       </div>
-      <p>{desc}</p>
       <div>
         <a href={githubLink} target="_blank">
-          <button className="btn project-btn hover:main-hover">
+          <button className="main-btn bg-slate-100 me-3 hover:main-hover">
             Github Repo
           </button>
         </a>
         <a href={liveLink.match(/github.com/) ? "" : liveLink} target="_blank">
           <button
-            className="btn project-btn hover:main-hover"
+            className="main-btn bg-slate-100 hover:main-hover"
             disabled={liveLink.match(/github.com/) ? true : false}
           >
             Live Site

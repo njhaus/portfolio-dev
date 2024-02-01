@@ -23,7 +23,7 @@ const LogoList = [
 
 const Logos = () => {
   return (
-    <div className="grid grid-cols-2 w-20 gap-3 h-5/6 mt-8">
+    <div className="grid grid-cols-2 w-20 min-w-20 gap-3 h-5/6 mt-8">
       {LogoList.map((logo, i) => (
         <div key={i} className='text-slate-400'>{logo}</div>
       ))}

@@ -7,12 +7,15 @@ export const textColorMap = {
   CSS: "purple pill",
   Node: "gray pill",
   Express: "darkgray pill",
-  MongoDB: "teal pill",
-  SQLite: "teal pill",
-  React: "lightteal pill",
+  MongoDB: "green pill",
+  SQLite: "green pill",
+  React: "teal pill",
   MaterialUI: "lightpurple pill",
   ChakraUI: "lightpurple pill",
   Bootstrap: "lightpurple pill",
+  NextJS: "black pill",
+  Prisma: "orange pill",
+  TailwindCSS: "lightpurple pill",
 };
 
 
@@ -60,7 +63,7 @@ const christmasListMaker = new PortfolioProject(
   "https://github.com/njhaus/christmas-list-maker",
   "https://christmas-list-maker-production.up.railway.app/",
   "/christmas-list-maker-img.png",
-  "The front end of a full-stack web application created with React, Typescript, and Material UI",
+  "A full-stack web application created with React, Typescript, and Material UI",
   ["React", "Typescript", "MaterialUI", "Node", "Express", "SQLite"]
 );
 // const christmasListMakerApi = new PortfolioProject(

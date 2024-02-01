@@ -1,12 +1,10 @@
+import Welcome from "../../pages/sections/welcome/Welcome";
+import Portfolio from "../sections/portfolio/Portfolio";
+import AboutMe from "../../pages/sections/AboutMe";
+import Resume from "../../pages/sections/Resume";
+import Certificates from "../../pages/sections/Certificates";
 
-  import Welcome from "../../pages/sections/welcome/Welcome";
-  import Portfolio from "../../pages/sections/Portfolio";
-  import AboutMe from "../../pages/sections/AboutMe";
-  import Resume from "../../pages/sections/Resume";
-  import Certificates from "../../pages/sections/Certificates";
-
-import Logos from './components/Logos'
-
+import Logos from "./components/Logos";
 
 interface Main {
   page: number;
@@ -14,7 +12,6 @@ interface Main {
 }
 
 const Main = ({ page, welcomeScroll }: Main) => {
-  
   const pageData = [
     {
       pageText: "Home",
@@ -40,10 +37,12 @@ const Main = ({ page, welcomeScroll }: Main) => {
 
   return (
     <main className={`flex m-3 p-2 h-full`}>
-      <section className="flex-grow overflow-y-scroll">{pageData[page].component}</section>
+      <section className="flex-grow max-w-1/2 overflow-y-scroll">
+        {pageData[page].component}
+      </section>
       <Logos />
     </main>
   );
-}
+};
 
-export default Main
+export default Main;

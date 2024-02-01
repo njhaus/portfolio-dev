@@ -1,9 +1,8 @@
 import { useState } from "react";
 
-import Logo from "../parts/Logo"
-import Menu from "./Menu"
-import MainImg from "../parts/MainImg";
-
+import Logo from "../../../src/components/Logo";
+import Menu from "./Menu";
+import MainImg from "../../../src/components/MainImg";
 
 interface iHeader {
   handlePage: (ind: number) => void;
@@ -12,24 +11,23 @@ interface iHeader {
 }
 
 const Header = ({ handlePage, currPage, handleDialog }: iHeader) => {
-  
-
   const [showMenu, setShowMenu] = useState(false);
 
   const handleMenu = () => {
     setShowMenu(!showMenu);
   };
 
-
   return (
     <header>
       <div className="header-section">
-        <MainImg/>
+        <MainImg />
       </div>
       <Logo handlePage={handlePage} />
       <div className="header-btn-container header-section">
         <div className="btn-brush menu-btn">
-          <button className="btn" onClick={() => handleMenu()}>Menu</button>
+          <button className="btn" onClick={() => handleMenu()}>
+            Menu
+          </button>
         </div>
         <Menu
           handlePage={handlePage}
@@ -41,6 +39,6 @@ const Header = ({ handlePage, currPage, handleDialog }: iHeader) => {
       </div>
     </header>
   );
-}
+};
 
-export default Header
+export default Header;

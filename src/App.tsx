@@ -24,14 +24,13 @@ function App() {
 
   
   return (
-    <div className='flex w-full h-full'>
+    <div className="flex w-full h-full">
       <Sidebar
         pageText={pageText}
         welcomeScroll={welcomeScroll}
         handleWelcomeScroll={handleWelcomeScroll}
-        
       />
-      <div className="flex-col grow h-full">
+      <div className="flex-col grow h-full w-4/5">
         <Header
           pageText={pageText}
           currPage={currPage}

@@ -14,7 +14,7 @@ const WelcomePortfolio = () => {
         I strive to produce comprehensive, easy-to-maintain applications that
         deliver an excellent user experience.
       </p>
-      <button>View Portfolio</button>
+      <button className="main-btn hover:main-hover">View Portfolio</button>
     </>
   );
 }

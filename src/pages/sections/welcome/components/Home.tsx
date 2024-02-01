@@ -17,7 +17,7 @@ const Home = () => {
         with excellent customer service, teamwork, and organization skills.
         Scroll down to learn more!
       </p>
-      <button>Contact Me</button>
+      <button className="main-btn hover:main-hover">Contact Me</button>
     </>
   );
 }
