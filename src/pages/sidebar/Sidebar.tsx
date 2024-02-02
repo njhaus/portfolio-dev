@@ -14,8 +14,9 @@ const Sidebar = ({pageText, welcomeScroll, handleWelcomeScroll}: Sidebar) => {
     <aside className="bg-slate-200 h-full w-1/5 max-w-64 relative">
       <MainImg />
       <ul className="inline-block min-w-40">
-        {pageText.map((pg) => (
+        {pageText.map((pg, i) => (
           <SideMenu
+            key={i}
             pageText={pg}
             welcomeScroll={welcomeScroll}
             pageNumber={pageText.indexOf(pg)}

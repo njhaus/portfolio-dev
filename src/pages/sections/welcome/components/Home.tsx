@@ -1,4 +1,4 @@
-import React from 'react'
+import { mainBtn } from '../../../../styles/classes';
 import Divider from '../../../../components/Divider'
 
 const Home = () => {
@@ -17,7 +17,7 @@ const Home = () => {
         with excellent customer service, teamwork, and organization skills.
         Scroll down to learn more!
       </p>
-      <button className="main-btn hover:main-hover">Contact Me</button>
+      <button className={`${mainBtn}`}>Contact Me</button>
     </>
   );
 }

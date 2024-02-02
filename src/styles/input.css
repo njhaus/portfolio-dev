@@ -26,11 +26,17 @@
         height: 36px;
         transition: all 150ms ease-in-out 0s;
     }
+    .main-active {
+        color: rgb(255, 255, 255);
+        background-color: rgb(217, 231, 235);
+        border: 1px solid rgb(93, 108, 116);
+        box-shadow: rgb(0 0 0 / 30%) 0px -1px 2px, rgb(231 238 236) 0px 0px 0px 2px;
+    }
     .main-hover {
         color: rgb(61, 79, 88);
-        background-color: rgb(255, 255, 255);
-        border: 1px solid rgb(93, 108, 116);
-        box-shadow: rgb(0 0 0 / 30%) 0px 4px 4px, rgb(231 238 236) 0px 0px 0px 3px;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(93, 108, 116);
+            box-shadow: rgb(0 0 0 / 30%) 0px 4px 4px, rgb(231 238 236) 0px 0px 0px 3px;
     }
     .section-heading {
         font-size: 2.5rem;

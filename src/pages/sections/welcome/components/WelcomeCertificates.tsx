@@ -1,4 +1,4 @@
-import React from 'react'
+import { mainBtn } from "../../../../styles/classes";
 
 import Divider from "../../../../components/Divider";
 
@@ -14,7 +14,7 @@ const WelcomeCertificates = () => {
         to be an asset to any developer team through numerous courses and
         diligent self-study. Click below to view my certificates.
       </p>
-      <button className="main-btn hover:main-hover">View Certificates</button>
+      <button className={`${mainBtn}`}>View Certificates</button>
     </>
   );
 }

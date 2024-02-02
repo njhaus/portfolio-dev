@@ -681,13 +681,26 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .mb-24 {
   margin-bottom: 6rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
 }
 
 .mb-72 {
@@ -783,6 +796,11 @@ video {
   width: 18rem;
 }
 
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .w-full {
   width: 100%;
 }
@@ -852,12 +870,12 @@ video {
   justify-content: space-evenly;
 }
 
-.gap-10 {
-  gap: 2.5rem;
-}
-
 .gap-12 {
   gap: 3rem;
+}
+
+.gap-16 {
+  gap: 4rem;
 }
 
 .gap-2 {
@@ -866,10 +884,6 @@ video {
 
 .gap-3 {
   gap: 0.75rem;
-}
-
-.gap-16 {
-  gap: 4rem;
 }
 
 .overflow-y-scroll {
@@ -929,6 +943,11 @@ video {
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .px-5 {
@@ -1102,6 +1121,13 @@ video {
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(93, 108, 116);
   box-shadow: rgb(0 0 0 / 30%) 0px 4px 4px, rgb(231 238 236) 0px 0px 0px 3px;
+}
+
+.active\:main-active:active {
+  color: rgb(255, 255, 255);
+  background-color: rgb(217, 231, 235);
+  border: 1px solid rgb(93, 108, 116);
+  box-shadow: rgb(0 0 0 / 30%) 0px -1px 2px, rgb(231 238 236) 0px 0px 0px 2px;
 }
 
 .visited\:text-pink-800:visited {

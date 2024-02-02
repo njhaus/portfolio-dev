@@ -1,0 +1,1 @@
+export const mainBtn = 'main-btn hover:main-hover active:main-active';

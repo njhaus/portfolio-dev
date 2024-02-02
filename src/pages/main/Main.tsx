@@ -2,7 +2,7 @@ import Welcome from "../../pages/sections/welcome/Welcome";
 import Portfolio from "../sections/portfolio/Portfolio";
 import AboutMe from "../../pages/sections/AboutMe";
 import Resume from "../../pages/sections/Resume";
-import Certificates from "../../pages/sections/Certificates";
+import Certificates from "../sections/certificates/Certificates";
 
 import Logos from "./components/Logos";
 

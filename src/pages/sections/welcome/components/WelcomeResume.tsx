@@ -1,3 +1,4 @@
+import { mainBtn } from "../../../../styles/classes";
 import Divider from "../../../../components/Divider";
 
 const WelcomeResume = () => {
@@ -14,7 +15,7 @@ const WelcomeResume = () => {
         and no-SQL databases, and a number of front-end libraries. Check out my
         resume to learn more about my professional experience.
       </p>
-      <button className="main-btn hover:main-hover">View Resume</button>
+      <button className={`${mainBtn}`}>View Resume</button>
     </>
   );
 }

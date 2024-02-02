@@ -1,4 +1,4 @@
-import React from 'react'
+import { mainBtn } from "../../../../styles/classes";
 
 import Divider from "../../../../components/Divider";
 
@@ -14,7 +14,7 @@ const WelcomePortfolio = () => {
         I strive to produce comprehensive, easy-to-maintain applications that
         deliver an excellent user experience.
       </p>
-      <button className="main-btn hover:main-hover">View Portfolio</button>
+      <button className={`${mainBtn}`}>View Portfolio</button>
     </>
   );
 }

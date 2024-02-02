@@ -1,4 +1,4 @@
-import React from 'react'
+import { mainBtn } from "../../../../styles/classes";
 
 import Divider from "../../../../components/Divider";
 
@@ -13,7 +13,7 @@ const WelcomeAboutMe = () => {
         I'm excited to work with you. Click below to learn more about me and
         what I have to offer your team.
       </p>
-      <button className='main-btn hover:main-hover'>About Me</button>
+      <button className={`${mainBtn}`}>About Me</button>
     </>
   );
 }

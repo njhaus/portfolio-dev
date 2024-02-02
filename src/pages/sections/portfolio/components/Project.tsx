@@ -1,4 +1,4 @@
-import React from "react";
+import { mainBtn } from "../../../../styles/classes";
 
 import Pill from "../../../../components/Pill"
 import { textColorMap } from "../../../../data/portfolioData";
@@ -34,13 +34,13 @@ const Project = ({
       </div>
       <div>
         <a href={githubLink} target="_blank">
-          <button className="main-btn bg-slate-100 me-3 hover:main-hover">
+          <button className={`${mainBtn}  me-3`}>
             Github Repo
           </button>
         </a>
         <a href={liveLink.match(/github.com/) ? "" : liveLink} target="_blank">
           <button
-            className="main-btn bg-slate-100 hover:main-hover"
+            className={`${mainBtn}`}
             disabled={liveLink.match(/github.com/) ? true : false}
           >
             Live Site
