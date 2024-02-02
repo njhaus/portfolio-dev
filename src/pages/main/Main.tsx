@@ -36,7 +36,7 @@ const Main = ({ page, welcomeScroll }: Main) => {
   ];
 
   return (
-    <main className={`flex m-3 p-2 h-full`}>
+    <main className={`flex m-3 p-2 main-height`}>
       <section className="flex-grow max-w-1/2 overflow-y-scroll">
         {pageData[page].component}
       </section>

@@ -34,7 +34,7 @@ const Welcome = ({ welcomeScroll }: Welcome) => {
   }, [welcomeScroll])
 
   return (
-    <div className="h-5/6 pb-5">
+    <div className="h-full pb-5">
       <article
         className="flex flex-col h-full justify-around items-center"
         ref={HomeRef}

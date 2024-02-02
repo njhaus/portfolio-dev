@@ -38,6 +38,7 @@ function App() {
         />
         <Main page={currPage} welcomeScroll={welcomeScroll} />
       </div>
+      <footer className='h-10'></footer>
     </div>
   );
 }

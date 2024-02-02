@@ -74,7 +74,9 @@
         font-size: 0.9rem;
         padding: 0 0.5rem;
     }
-    
+    .main-height {
+        height: calc(100% - 5rem);
+    }
 }
 
 @layer utilities {
