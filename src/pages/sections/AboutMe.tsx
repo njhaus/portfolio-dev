@@ -1,8 +1,7 @@
-import React from 'react'
-
 import Divider from '../../components/Divider';
 
 const AboutMe = () => {
+
   return (
     <div className="w-full px-10 py-6 h-fit mb-24">
       <h1 className="section-heading">

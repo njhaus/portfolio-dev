@@ -21,14 +21,33 @@ const LogoList = [
     
 ];
 
-const Logos = () => {
-  return (
-    <div className="grid grid-cols-2 w-20 min-w-20 gap-3 h-5/6 mt-8">
-      {LogoList.map((logo, i) => (
-        <div key={i} className='text-slate-400'>{logo}</div>
-      ))}
-    </div>
-  );
+interface Logos {
+  direction: 'vertical' | 'horizontal';
+}
+
+const Logos = ({ direction }: Logos) => {
+  if (direction === 'vertical') {
+    return (
+      <div className="w-20 min-w-20 gap-3 h-5/6 mt-8 hidden md:grid grid-cols-2">
+        {LogoList.map((logo, i) => (
+          <div key={i} className="text-slate-400">
+            {logo}
+          </div>
+        ))}
+      </div>
+    );
+  }
+  else if (direction === 'horizontal') {
+    return (
+      <div className="grid grid-cols-6 w-full me-15 gap-2 h-10 mt-8 md:hidden">
+        {LogoList.map((logo, i) => (
+          <div key={i} className="text-slate-400">
+            {logo}
+          </div>
+        ))}
+      </div>
+    )
+  }
 }
 
 export default Logos

@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Resume = () => {
   return (
     <div className="w-4/5 h-more mt-5 mx-auto h-fit mb-72">

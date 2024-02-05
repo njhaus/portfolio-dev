@@ -1,10 +1,9 @@
-import React from 'react'
 
 const MainImg = () => {
   return (
-    <div className='ps-5'>
+    <div className='relative ps-5 z-40'>
       <img
-        className="rounded-full bg-main w-5/6 mx-auto my-5 w-48 mx-auto"
+        className="rounded-full bg-main w-full my-5 max-w-44 min-w-24 mx-auto"
         src={"/headshot.png"}
       ></img>
     </div>

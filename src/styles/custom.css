@@ -1,0 +1,164 @@
+/* Main */
+
+.main-btn {
+    display: inline-block;
+    outline: 0;
+    appearance: none;
+    padding: 0px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: rgb(249, 251, 250);
+    border: 1px solid rgb(137, 151, 155);
+    box-shadow: rgb(6 22 33 / 30%) 0px 1px 2px;
+    color: rgb(61, 79, 88);
+    font-size: 14px;
+    font-weight: 400;
+    height: 36px;
+    transition: all 150ms ease-in-out 0s;
+}
+
+.main-btn:active {
+    color: rgb(255, 255, 255);
+    background-color: rgb(217, 231, 235);
+    border: 1px solid rgb(93, 108, 116);
+    box-shadow: rgb(0 0 0 / 30%) 0px -1px 2px, rgb(231 238 236) 0px 0px 0px 2px;
+}
+
+.main-btn:hover {
+    color: rgb(61, 79, 88);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(93, 108, 116);
+    box-shadow: rgb(0 0 0 / 30%) 0px 4px 4px, rgb(231 238 236) 0px 0px 0px 3px;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    margin: 1rem;
+}
+
+.section {
+    border: 1px solid black;
+}
+
+.project-heading {
+    font-size: 1.25rem;
+    margin: 0.5rem;
+    font-weight: 500;
+    color: gray;
+}
+
+.project-img {
+    object-fit: cover;
+    border: 3px solid var(--dk-gray);
+    border-radius: 5px;
+}
+
+.pills-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+
+}
+
+.pill {
+    font-weight: 600;
+    text-transform: uppercase;
+    /* opacity: 0.8; */
+    color: white;
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+}
+
+
+/* Welcome */
+
+.welcome-selected-top {
+    opacity: 1;
+    animation: welcome-scroll-in-top 0.6s;
+}
+
+.welcome-selected-bottom {
+    opacity: 1;
+    animation: welcome-scroll-in-bottom 0.6s;
+}
+
+.welcome-deselected-top {
+    opacity: 1 !important;
+    animation: welcome-scroll-out-top 0.6s forwards;
+}
+
+.welcome-deselected-bottom {
+    opacity: 1 !important;
+    animation: welcome-scroll-out-bottom 0.6s forwards;
+}
+
+@keyframes welcome-scroll-in-top {
+    from {
+    
+        transform: translateY(-105%);
+    } to {  
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes welcome-scroll-in-bottom {
+    from {
+        transform: translateY(105%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes welcome-scroll-out-top {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-105%);
+    }
+}
+
+@keyframes welcome-scroll-out-bottom {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(105%);
+    }
+}
+
+.sidebar-decoration {
+    mask-image: url('../../public/curve-border-vertical.png');
+    mask-size: cover;
+    mask-position: center;
+}
+
+/* Dialog */
+
+.dialog-decoration { 
+    mask-image: url('../../public/curve-border.png');
+    mask-size: cover;
+    mask-position: center;
+}
+
+/* sidebar */
+
+.sidebar-circle:hover + button {
+    display: block !important;
+}
+
+
+@media screen and (max-height: 512px) {
+    .side-menu {
+        display: none;
+    }
+}

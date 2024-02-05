@@ -1,21 +1,26 @@
 interface Sidemenu {
   pageText: string;
+  currPage: number;
   pageNumber: number;
-  welcomeScroll: number;
-  handleWelcomeScroll: (scroll: number) => void;
+  handlePage: (page: number) => void;
 }
 
-const SideMenu = ({ pageText, pageNumber, welcomeScroll, handleWelcomeScroll }: Sidemenu) => {
+const SideMenu = ({ pageText, currPage, pageNumber, handlePage }: Sidemenu) => {
   
-  const clsName = welcomeScroll === pageNumber ? 'selected' : '';
+  const clsName = pageNumber === currPage ? 'highlight' : '';
 
   return (
-    <div className={`flex gap-2 my-5 ${clsName}`}>
-      <div className="bg-xLight border-main border rounded-full w-7 h-7"></div>
-      <button
-        className="h-8 bg-xLight border-main border rounded-lg flex-grow"
+    <div className={`relative flex gap-2 my-5 ps-2 z-10 items-center `}>
+      <div
+        className={`sidebar-circle bg-slate-300 border-main border rounded-full w-7 h-7 ${clsName}`}
         onClick={() => {
-          handleWelcomeScroll(pageNumber);
+          handlePage(pageNumber);
+        }}
+      ></div>
+      <button
+        className={`hidden sm:block h-8 bg-slate-300 border-main border rounded-lg flex-grow ${clsName}`}
+        onClick={() => {
+          handlePage(pageNumber);
         }}
       >
         {pageText}

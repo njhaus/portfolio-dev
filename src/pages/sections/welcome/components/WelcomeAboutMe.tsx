@@ -2,7 +2,12 @@ import { mainBtn } from "../../../../styles/classes";
 
 import Divider from "../../../../components/Divider";
 
-const WelcomeAboutMe = () => {
+const WelcomeAboutMe = ({
+  handlePage, page = 0
+}: {
+    handlePage: (page: number) => void;
+    page?: number
+}) => {
   return (
     <>
       <Divider />
@@ -13,9 +18,9 @@ const WelcomeAboutMe = () => {
         I'm excited to work with you. Click below to learn more about me and
         what I have to offer your team.
       </p>
-      <button className={`${mainBtn}`}>About Me</button>
+      <button className={`${mainBtn}`} onClick={() => handlePage(page)}>About Me</button>
     </>
   );
-}
+};
 
 export default WelcomeAboutMe

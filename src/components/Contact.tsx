@@ -41,44 +41,57 @@ const Contact = ({ handleDialog, dialogOpen }: iContact) => {
   if (!dialogOpen) return;
 
   return (
-    <div className="dialog-overlay" onClick={(e) => stopCloseDialog(e)}>
+    <div
+      className="fixed bg-slate-800 bg-opacity-40 w-screen h-screen z-50 dialog-overlay"
+      id="dialog-overlay"
+      onClick={(e) => stopCloseDialog(e)}
+    >
       <div
         ref={dialogRef}
-        className="dialog"
+        className="relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white opacity-100 pt-5 max-w-[25rem] rounded-2xl shadow-md overflow-hidden max-h-screen"
         onClick={(e) => stopCloseDialog(e)}
       >
-        <button className="dialog-close" onClick={() => handleDialog(false)}>
+        <button
+          className="absolute right-3 top-2"
+          onClick={() => handleDialog(false)}
+        >
           &#x2715;
         </button>
-        <h1>Contact me</h1>
-        <ul>
+        <h1 className="text-2xl">Contact me</h1>
+        <img className="w-20 mx-auto" src="/logo-decoration.png" />
+        <ul className="mt-5 w-4/6 mx-auto text-left">
           {contactArr.map((contact, i) => (
-            <li key={i}>
+            <li key={i} className="relative">
               {copyMsg === contact.type && (
-                <span className="copy-msg">Copied to clipboard!</span>
+                <span className="absolute -top-5 text-slate-400 text-sm">
+                  Copied to clipboard!
+                </span>
               )}
-              <span
-                className="dialog-brush"
-                onClick={() => showCopyMsg(contact.type, contact.text)}
-              >
-                <span>{contact.type}</span>
+              <span onClick={() => showCopyMsg(contact.type, contact.text)}>
+                <button className="px-3 py-1 me-2 bg-xLight border-main border rounded-lg flex-grow">
+                  {contact.type}
+                </button>
               </span>{" "}
               {contact.text}
+              <hr className="mx-auto bg-slate-600 my-5"></hr>
             </li>
           ))}
           <li>
             <a
-              className="dialog-brush"
               href="https://www.linkedin.com/in/nicholas-haus-b8b58b277/"
               target="_blank"
             >
-              <span>LinkedIn</span>
+              <button className="px-3 py-1 me-2 bg-xLight border-main border rounded-lg flex-grow">
+                LinkedIn
+              </button>
             </a>{" "}
             Nicholas Haus
           </li>
         </ul>
-        <p>Looking forward to hearing from you!</p>
-        <div className="dialog-decoration"></div>
+        <div className="dialog-decoration w-100 h-4 bg-slate-200 mt-8 mb-[-1px]"></div>
+        <div className="bg-slate-200 p-5">
+          <p>Looking forward to hearing from you!</p>
+        </div>
       </div>
     </div>
   );

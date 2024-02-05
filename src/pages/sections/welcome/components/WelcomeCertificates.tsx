@@ -2,7 +2,13 @@ import { mainBtn } from "../../../../styles/classes";
 
 import Divider from "../../../../components/Divider";
 
-const WelcomeCertificates = () => {
+const WelcomeCertificates = ({
+  handlePage,
+  page = 0,
+}: {
+  handlePage: (page: number) => void;
+  page?: number;
+}) => {
   return (
     <>
       <Divider />
@@ -14,9 +20,9 @@ const WelcomeCertificates = () => {
         to be an asset to any developer team through numerous courses and
         diligent self-study. Click below to view my certificates.
       </p>
-      <button className={`${mainBtn}`}>View Certificates</button>
+      <button className={`${mainBtn}`} onClick={() => handlePage(page)}>View Certificates</button>
     </>
   );
-}
+};
 
 export default WelcomeCertificates

@@ -11,7 +11,6 @@ interface iCertificate {
 
 const Certificate = ({
   title,
-    imgLink,
   courseLink,
   img,
   desc,

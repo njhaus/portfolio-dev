@@ -1,15 +1,19 @@
 import { mainBtn } from '../../../../styles/classes';
 import Divider from '../../../../components/Divider'
 
-const Home = () => {
+interface Home {
+  handleDialog: (set: boolean) => void;
+}
+
+const Home = ({handleDialog}: Home) => {
   return (
     <>
       <div className="ms-10 mt-8 mb-2">
-        <h1 className="text-9xl font-extralight ps-16">NICK</h1>
-        <h1 className="text-9xl font-medium pe-16">HAUS</h1>
+        <h1 className="text-8xl sm:text-9xl font-extralight ps-16">NICK</h1>
+        <h1 className="text-8xl sm:text-9xl font-medium pe-16">HAUS</h1>
       </div>
       <Divider></Divider>
-      <p className="mx-16 max-w-2xl my-4">
+      <p className="sm:mx-16 max-w-2xl my-4">
         <span className="font-semibold">I'm a full-stack web developer</span>{" "}
         with a passion for creating beautiful, dynamic, and accessible web
         applications and a robust knowledge of many modern web development tools
@@ -17,7 +21,9 @@ const Home = () => {
         with excellent customer service, teamwork, and organization skills.
         Scroll down to learn more!
       </p>
-      <button className={`${mainBtn}`}>Contact Me</button>
+      <button className={`${mainBtn}`} onClick={() => handleDialog(true)}>
+        Contact Me
+      </button>
     </>
   );
 }

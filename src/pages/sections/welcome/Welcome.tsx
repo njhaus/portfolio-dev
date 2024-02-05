@@ -1,29 +1,52 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 import Home from './components/Home'
 import WelcomeResume from "./components/WelcomeResume";
 import WelcomePortfolio from "./components/WelcomePortfolio";
 import WelcomeCertificates from "./components/WelcomeCertificates";
 import WelcomeAboutMe from "./components/WelcomeAboutMe";
+import Logos from "../../main/components/Logos";
 
 interface Welcome {
   welcomeScroll: number;
+  handleWelcomeScroll: (scroll: number) => void;
+  handlePage: (page: number) => void;
+  handleDialog: (set: boolean) => void;
 }
 
-const Welcome = ({ welcomeScroll }: Welcome) => {
+const Welcome = ({ welcomeScroll, handleWelcomeScroll, handlePage, handleDialog }: Welcome) => {
   
-  const HomeRef = useRef(null)
+  const homeRef = useRef<HTMLDivElement | null>(null)
   const ResumeRef = useRef(null);
   const PortfolioRef = useRef(null);
   const CertificatesRef = useRef(null);
   const AboutMeRef = useRef(null);
 
   const refsArray: React.MutableRefObject<HTMLElement | null>[] = [
-    HomeRef,
+    homeRef,
     ResumeRef,
     PortfolioRef,
     CertificatesRef,
     AboutMeRef,
+  ];
+
+  const articles = [
+    {
+      ref: ResumeRef,
+      component: <WelcomeResume handlePage={handlePage} />,
+    },
+    {
+      ref: PortfolioRef,
+      component: <WelcomePortfolio handlePage={handlePage} />,
+    },
+    {
+      ref: CertificatesRef,
+      component: <WelcomeCertificates handlePage={handlePage} />,
+    },
+    {
+      ref: AboutMeRef,
+      component: <WelcomeAboutMe handlePage={handlePage} />,
+    },
   ];
 
   useEffect(() => {
@@ -33,38 +56,33 @@ const Welcome = ({ welcomeScroll }: Welcome) => {
     }
   }, [welcomeScroll])
 
+
+  useEffect(() => {
+    handleWelcomeScroll(-1);
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, [])
+
   return (
     <div className="h-full pb-5">
       <article
         className="flex flex-col h-full justify-around items-center"
-        ref={HomeRef}
+        ref={homeRef}
       >
-        <Home />
+        <Home handleDialog={handleDialog} />
       </article>
-      <article
-        className="flex flex-col h-full justify-around items-center py-10 my-8"
-        ref={ResumeRef}
-      >
-        <WelcomeResume/>
-      </article>
-      <article
-        className="flex flex-col h-full justify-around items-center py-10 my-8"
-        ref={PortfolioRef}
-      >
-        <WelcomePortfolio/>
-      </article>
-      <article
-        className="flex flex-col h-full justify-around items-center py-10 my-8"
-        ref={CertificatesRef}
-      >
-        <WelcomeCertificates/>
-      </article>
-      <article
-        className="flex flex-col h-full justify-around items-center py-10 my-8"
-        ref={AboutMeRef}
-      >
-        <WelcomeAboutMe/>
-      </article>
+      {articles.map((article, i) => (
+        <article
+          key={i}
+          className="flex flex-col h-full justify-around items-center py-10 my-8 min-h-[40rem]"
+          ref={article.ref}
+        >
+          {React.cloneElement(article.component, { page: i + 1 })}
+        </article>
+      ))}
+      <Logos direction={"horizontal"} />
     </div>
   );
 };

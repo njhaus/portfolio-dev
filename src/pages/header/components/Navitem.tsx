@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface NavItem {
   pageText: string;
   currPage: number;
@@ -13,7 +11,7 @@ const Navitem = ({ pageText, currPage, pageNumber, handlePage }: NavItem) => {
     
   return (
     <li className={`${clsName} flex align-middle`}>
-      <button className={'text-main'} onClick={() => {handlePage(pageNumber)}}>{pageText}</button>
+      <button className={'text-slate-400'} onClick={() => {handlePage(pageNumber)}}>{pageText}</button>
     </li>
   );
 }

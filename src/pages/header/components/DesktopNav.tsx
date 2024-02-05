@@ -1,5 +1,3 @@
-import React from 'react'
-
 import NavItem from './Navitem'
 
 interface Nav {
@@ -13,9 +11,9 @@ const Nav = ({ pageText, currPage, handlePage }: Nav) => {
 
 
   return (
-    <nav className="flex align-middle">
+    <nav className="hidden md:flex align-middle">
       <ul className="flex gap-12 align-middle">
-        {pageText.map((pg, i) => (
+        {pageText.slice(1).map((pg, i) => (
           <NavItem
             key={i}
             pageText={pg}

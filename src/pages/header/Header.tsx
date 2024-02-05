@@ -1,7 +1,6 @@
-import React from "react"
-
-import MainLogo from './components/MainLogo'
-import Nav from './components/Nav'
+import MainLogo from '../../components/MainLogo'
+import DesktopNav from './components/DesktopNav'
+import MobileNav from './components/MobileNav'
 
 import {headingHeight} from '../../styles/styleVariables'
 
@@ -14,9 +13,11 @@ interface Header {
 
 const Header = ({pageText, currPage, handlePage}: Header) => {
   return (
-    <header className={`sticky top-0 px-5 flex justify-between align-middle h-${headingHeight} w-full pt-3`}>
-      <MainLogo />
-      <Nav pageText={pageText} currPage={currPage} handlePage={handlePage} />
+    <header className={`sticky top-0 px-5 flex justify-between align-middle h-${headingHeight} w-full pt-3 z-40`}>
+      <div className='spacer sm:hidden'></div>
+      <MainLogo handlePage={handlePage} />
+      <DesktopNav pageText={pageText} currPage={currPage} handlePage={handlePage} />
+      <MobileNav pageText={pageText} currPage={currPage} handlePage={handlePage}/>
     </header>
   );
 }
