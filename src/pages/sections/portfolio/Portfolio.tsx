@@ -1,4 +1,3 @@
-import { useState } from "react";
 
 import { portfolioData } from "../../../data/portfolioData";
 import Project from "../portfolio/components/Project";
