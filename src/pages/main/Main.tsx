@@ -11,32 +11,42 @@ import Logos from "./components/Logos";
 interface Main {
   page: number;
   welcomeScroll: number;
+  prevScroll: number;
   handleWelcomeScroll: (scroll: number) => void;
   handlePage: (page: number) => void;
   handleDialog: (set: boolean) => void;
 }
 
-const Main = ({ page, welcomeScroll, handleWelcomeScroll, handlePage, handleDialog }: Main) => {
+const Main = ({ page, welcomeScroll, prevScroll, handleWelcomeScroll, handlePage, handleDialog }: Main) => {
+
   const pageData = [
     {
       pageText: "Home",
-      component: <Welcome welcomeScroll={welcomeScroll} handleWelcomeScroll={handleWelcomeScroll} handlePage={handlePage} handleDialog={handleDialog}></Welcome>,
+      component: (
+        <Welcome
+          welcomeScroll={welcomeScroll}
+          prevScroll={prevScroll}
+          handleWelcomeScroll={handleWelcomeScroll}
+          handlePage={handlePage}
+          handleDialog={handleDialog}
+        ></Welcome>
+      ),
     },
     {
       pageText: "Résumé",
-      component: <Resume></Resume>,
+      component: <Resume handlePage={handlePage}></Resume>,
     },
     {
       pageText: "Portfolio",
-      component: <Portfolio></Portfolio>,
+      component: <Portfolio handlePage={handlePage}></Portfolio>,
     },
     {
       pageText: "Certificates",
-      component: <Certificates></Certificates>,
+      component: <Certificates handlePage={handlePage}></Certificates>,
     },
     {
       pageText: "About Me",
-      component: <AboutMe></AboutMe>,
+      component: <AboutMe handlePage={handlePage}></AboutMe>,
     },
   ];
 
@@ -47,8 +57,9 @@ const Main = ({ page, welcomeScroll, handleWelcomeScroll, handlePage, handleDial
   const handleManualScroll = () => {
     if (welcomeRef && welcomeRef.current) {
       const rect = welcomeRef.current.getBoundingClientRect();
-      const scrollPosition = Math.abs(Math.floor((rect.y + 50) / window.innerHeight));
-      if (scrollPosition !== welcomeScroll) {
+      const scrollPosition = Math.round(Math.abs(parseFloat((((rect.y) / window.innerHeight)).toFixed(1)))) ;
+      console.log(scrollPosition)
+      if (scrollPosition !== welcomeScroll && scrollPosition < pageData.length) {
         handleWelcomeScroll(scrollPosition);
       }
     }
@@ -59,10 +70,10 @@ const Main = ({ page, welcomeScroll, handleWelcomeScroll, handlePage, handleDial
   }, [page]);
 
   return (
-    <main className={`flex m-3 p-2 h-less`}>
+    <main className={`flex h-less w-full`}>
       <section
         ref={scrollRef}
-        className="flex-grow max-w-1/2 overflow-y-scroll"
+        className="flex-grow max-w-1/2 overflow-y-scroll px-5"
         onWheel={() => handleManualScroll()}
       >
         <div ref={welcomeRef} className="h-full pb-5 min-h-[32rem]">

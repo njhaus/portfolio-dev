@@ -1,11 +1,11 @@
-const Resume = () => {
+const Resume = ({ handlePage }: {handlePage: (page: number) => void}) => {
   return (
     <div className="w-4/5 h-more mt-5 mx-auto h-fit mb-72">
       <h1 className="section-heading">Resume</h1>
       <div className="w-full relative h-full">
         <a href="/resume-24-img.png" target="_blank">
           <img
-            className="absolute w-full pt-8"
+            className="relative h-full pt-8 mx-auto"
             id="resume"
             src="/resume-24-img.png"
           ></img>
@@ -21,6 +21,9 @@ const Resume = () => {
           Click to enlarge &#128269;
         </p>
       </div>
+      <button className="main-btn" onClick={() => handlePage(0)}>
+        Return Home
+      </button>
     </div>
   );
 }

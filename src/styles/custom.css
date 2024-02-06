@@ -32,6 +32,43 @@
     box-shadow: rgb(0 0 0 / 30%) 0px 4px 4px, rgb(231 238 236) 0px 0px 0px 3px;
 }
 
+/* Main animations */
+
+.main-animate-left {
+    animation: in-left 0.5s ease-out forwards;
+}
+
+.main-animate-right{
+    animation: in-right 0.5s ease-out forwards;
+}
+
+@keyframes in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+    
+}
+
+@keyframes in-right {
+    from {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+
+}
+
+/* Sections */
+
 .section-heading {
     font-size: 2.5rem;
     margin: 1rem;
@@ -53,6 +90,7 @@
     border: 3px solid var(--dk-gray);
     border-radius: 5px;
 }
+
 
 .pills-container {
     width: 100%;

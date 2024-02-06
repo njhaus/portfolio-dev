@@ -33,6 +33,9 @@
     .w-less {
         width: calc(100vw - 2rem);
     }
+    .w-less-2 {
+        width: calc(100vw - 4.75rem);
+    }
     .yellow {
         background-color: goldenrod;
     }

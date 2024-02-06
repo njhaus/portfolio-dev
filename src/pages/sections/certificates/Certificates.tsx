@@ -2,8 +2,11 @@ import { certificates } from "../../../data/certificateData";
 import Certificate from "./components/Certificate"
 
 
-const Certificates = () => {
-
+const Certificates = ({
+  handlePage,
+}: {
+  handlePage: (page: number) => void;
+}) => {
   return (
     <div className="w-full px-8 py-6 h-fit mb-24">
       <h1 className="section-heading">My Certificates</h1>
@@ -23,6 +26,9 @@ const Certificates = () => {
           ></Certificate>
         ))}
       </div>
+      <button className="main-btn" onClick={() => handlePage(0)}>
+        Return Home
+      </button>
     </div>
   );
 };

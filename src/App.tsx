@@ -40,7 +40,7 @@ function App() {
 
   
   return (
-    <div className="flex w-full h-full relative">
+    <div className="flex w-full h-full relative overflow-hidden">
       {contactDialogOpen && (
         <Contact handleDialog={handleDialog} dialogOpen={contactDialogOpen} />
       )}
@@ -62,6 +62,7 @@ function App() {
         <Main
           page={currPage}
           welcomeScroll={welcomeScroll}
+          prevScroll={prevScroll}
           handleWelcomeScroll={handleWelcomeScroll}
           handlePage={handlePage}
           handleDialog={handleDialog}

@@ -1,7 +1,6 @@
 import Divider from '../../components/Divider';
 
-const AboutMe = () => {
-
+const AboutMe = ({ handlePage }: { handlePage: (page: number) => void }) => {
   return (
     <div className="w-full px-10 py-6 h-fit mb-24">
       <h1 className="section-heading">
@@ -42,6 +41,9 @@ const AboutMe = () => {
           and influence the world.
         </p>
       </div>
+      <button className="main-btn" onClick={() => handlePage(0)}>
+        Return Home
+      </button>
     </div>
   );
 };

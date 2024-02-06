@@ -9,12 +9,13 @@ import Logos from "../../main/components/Logos";
 
 interface Welcome {
   welcomeScroll: number;
+  prevScroll: number;
   handleWelcomeScroll: (scroll: number) => void;
   handlePage: (page: number) => void;
   handleDialog: (set: boolean) => void;
 }
 
-const Welcome = ({ welcomeScroll, handleWelcomeScroll, handlePage, handleDialog }: Welcome) => {
+const Welcome = ({ welcomeScroll, prevScroll, handleWelcomeScroll, handlePage, handleDialog }: Welcome) => {
   
   const homeRef = useRef<HTMLDivElement | null>(null)
   const ResumeRef = useRef(null);
@@ -30,29 +31,53 @@ const Welcome = ({ welcomeScroll, handleWelcomeScroll, handlePage, handleDialog 
     AboutMeRef,
   ];
 
-  const articles = [
+  const welcomeArticles = [
     {
       ref: ResumeRef,
-      component: <WelcomeResume handlePage={handlePage} />,
+      component: (
+        <WelcomeResume
+          handlePage={handlePage}
+          welcomeScroll={welcomeScroll}
+          prevScroll={prevScroll}
+        />
+      ),
     },
     {
       ref: PortfolioRef,
-      component: <WelcomePortfolio handlePage={handlePage} />,
+      component: (
+        <WelcomePortfolio
+          handlePage={handlePage}
+          welcomeScroll={welcomeScroll}
+          prevScroll={prevScroll}
+        />
+      ),
     },
     {
       ref: CertificatesRef,
-      component: <WelcomeCertificates handlePage={handlePage} />,
+      component: (
+        <WelcomeCertificates
+          handlePage={handlePage}
+          welcomeScroll={welcomeScroll}
+          prevScroll={prevScroll}
+        />
+      ),
     },
     {
       ref: AboutMeRef,
-      component: <WelcomeAboutMe handlePage={handlePage} />,
+      component: (
+        <WelcomeAboutMe
+          handlePage={handlePage}
+          welcomeScroll={welcomeScroll}
+          prevScroll={prevScroll}
+        />
+      ),
     },
   ];
 
   useEffect(() => {
     const target = refsArray[welcomeScroll]?.current;
     if (target) {
-      target.scrollIntoView({behavior: 'smooth'})
+        target.scrollIntoView({ behavior: "smooth" }); 
     }
   }, [welcomeScroll])
 
@@ -73,7 +98,7 @@ const Welcome = ({ welcomeScroll, handleWelcomeScroll, handlePage, handleDialog 
       >
         <Home handleDialog={handleDialog} />
       </article>
-      {articles.map((article, i) => (
+      {welcomeArticles.map((article, i) => (
         <article
           key={i}
           className="flex flex-col h-full justify-around items-center py-10 my-8 min-h-[40rem]"
