@@ -53,7 +53,7 @@ function App() {
         handlePage={handlePage}
         handleDialog={handleDialog}
       />
-      <div className="main-container flex-col grow h-full w-4/5">
+      <div className="main-container flex flex-col h-full -ms-10 md:w-4/5">
         <Header
           pageText={pageText}
           currPage={currPage}
