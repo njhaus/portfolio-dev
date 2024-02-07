@@ -9,6 +9,7 @@ import { pageText } from './data/pageData';
 import './App.css'
 import './styles/custom.css'
 import Contact from './components/Contact';
+import DeviceDetector from 'device-detector-js';
 
 
 function App() {
@@ -18,12 +19,21 @@ function App() {
   const [prevScroll, setPrevScroll] = useState(0);
   const [contactDialogOpen, setContactDialogOpen] = useState(false)
 
+
+  const deviceDetector = new DeviceDetector();
+  const device = deviceDetector.parse(navigator.userAgent);
+  
+
   const handlePage = (page: number) => {
     setCurrPage(page)
   }
 
   const handleWelcomeScroll = (scroll: number) => {
-    if (scroll === -1) {
+    if (device && device.device?.type !== "desktop") {
+      console.log("mobile");
+      return;
+    }
+    else if (scroll === -1) {
       // reset
       setPrevScroll(0);
       setWelcomeScroll(0);

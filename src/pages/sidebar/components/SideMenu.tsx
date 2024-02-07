@@ -12,7 +12,7 @@ const SideMenu = ({ pageText, currPage, pageNumber, handlePage }: Sidemenu) => {
   return (
     <div className={`relative flex gap-2 my-5 ps-2 z-10 items-center `}>
       <div
-        className={`sidebar-circle bg-slate-300 border-main border rounded-full w-7 h-7 ${clsName}`}
+        className={`sidebar-circle relative bg-slate-300 border-main border rounded-full w-7 h-7 ${clsName}`}
         onClick={() => {
           handlePage(pageNumber);
         }}

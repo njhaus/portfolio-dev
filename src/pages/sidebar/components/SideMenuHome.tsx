@@ -18,7 +18,7 @@ const SideMenuHome = ({
   const selectOut = (prevScroll !== pageNumber || welcomeScroll === prevScroll ) ? "" : prevScroll > welcomeScroll ? "welcome-deselected-top" : "welcome-deselected-bottom";
 
   return (
-    <div className="flex gap-2 my-5 px-2 items-center">
+    <div className="relative flex gap-2 my-5 px-2 z-10 items-center">
       <div
         className={`sidebar-circle relative bg-slate-300 border-main border rounded-full w-7 h-7 overflow-hidden`}
         onClick={() => {

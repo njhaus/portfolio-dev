@@ -63,8 +63,9 @@ const Main = ({ page, welcomeScroll, prevScroll, handleWelcomeScroll, handlePage
   const handleManualScroll = () => {
     if (device && device.device?.type !== 'desktop') {
       console.log('mobile')
+      return
     }
-    if (welcomeRef && welcomeRef.current) {
+    else if (welcomeRef && welcomeRef.current) {
       const rect = welcomeRef.current.getBoundingClientRect();
       const scrollPosition = Math.round(Math.abs(((rect.y + 72) / 640))) ;
       if (scrollPosition !== welcomeScroll && scrollPosition < pageData.length) {
