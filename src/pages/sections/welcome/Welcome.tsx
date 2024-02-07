@@ -18,7 +18,7 @@ interface Welcome {
 const Welcome = ({
   welcomeScroll,
   prevScroll,
-  // handleWelcomeScroll,
+  handleWelcomeScroll,
   handlePage,
   handleDialog }: Welcome) => {
   
@@ -82,20 +82,17 @@ const Welcome = ({
   useEffect(() => {
     const target = refsArray[welcomeScroll]?.current;
     if (target) {
-      // target.scrollIntoView({ behavior: "smooth" });
-      console.log("temp");
+      target.scrollIntoView({ behavior: "smooth" });
     }
   }, [welcomeScroll])
 
 
   useEffect(() => {
-    // handleWelcomeScroll(-1);
-    console.log("temp");
+    handleWelcomeScroll(-1);
   }, []);
 
   useEffect(() => {
-    // window.scrollTo(0,0)
-    console.log("temp");
+    window.scrollTo(0,0)
   }, [])
 
   return (

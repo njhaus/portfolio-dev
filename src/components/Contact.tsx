@@ -42,13 +42,13 @@ const Contact = ({ handleDialog, dialogOpen }: iContact) => {
 
   return (
     <div
-      className="fixed bg-slate-800 bg-opacity-40 w-screen h-screen z-50 dialog-overlay max-h-svh overflow-y-auto"
+      className="fixed bg-slate-800 bg-opacity-40 w-screen h-screen z-50 dialog-overlay overflow-y-auto"
       id="dialog-overlay"
       onClick={(e) => stopCloseDialog(e)}
     >
       <div
         ref={dialogRef}
-        className="relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white opacity-100 pt-5 max-w-[25rem] rounded-2xl shadow-md overflow-hidden max-h-screen"
+        className="relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white opacity-100 pt-5 max-w-[25rem] rounded-2xl shadow-md overflow-y-auto overflow-x-hidden max-h-5/6 mt-5"
         onClick={(e) => stopCloseDialog(e)}
       >
         <button

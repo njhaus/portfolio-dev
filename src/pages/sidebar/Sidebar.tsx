@@ -46,15 +46,15 @@ const Sidebar = ({currPage, pageText, welcomeScroll, prevScroll, handleWelcomeSc
           ))}
         </ul>
       )}
-      <div className="absolute bottom-2 left-0 sm:left-1/2 flex gap-2 my-5 min-w-40 sm:-translate-x-1/2 ps-2 items-center sm:justify-center">
+      <div className="absolute bottom-2 left-2 sm:left-1/2 flex gap-2 my-5 min-w-40 sm:-translate-x-1/2 sm:items-center sm:justify-center">
         <div
-          className="sidebar-circle bg-slate-100 border-main border rounded-full w-7 h-7"
+          className="sidebar-circle relative bg-slate-100 border-main border rounded-full w-7 h-7"
           onClick={() => {
             handleDialog(true);
           }}
         ></div>
         <button
-          className="hidden h-8 bg-slate-100 border-main border rounded-lg flex-grow sm:block"
+          className="hidden h-7 bg-slate-100 border-main border rounded-lg flex-grow sm:block"
           onClick={() => {
             handleDialog(true);
           }}

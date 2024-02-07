@@ -30,7 +30,7 @@ const SideMenuHome = ({
         ></div>
       </div>
       <button
-        className={`hidden sm:block relative h-7 bg-slate-300 border-main border rounded-lg flex-grow overflow-hidden`}
+        className={`hidden relative h-7 bg-slate-300 border-main border rounded-lg flex-grow overflow-hidden sm:block`}
         onClick={() => {
           handleWelcomeScroll(pageNumber);
         }}
