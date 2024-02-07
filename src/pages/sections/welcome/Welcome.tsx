@@ -82,7 +82,7 @@ const Welcome = ({
   useEffect(() => {
     const target = refsArray[welcomeScroll]?.current;
     if (target) {
-      // target.scrollIntoView({ behavior: "smooth" });
+      target.scrollIntoView({ behavior: "smooth" });
       console.log('temp')
     }
   }, [welcomeScroll])
