@@ -33,7 +33,7 @@ function App() {
       console.log("mobile");
       return;
     }
-   if (scroll === -1) {
+   else if (scroll === -1) {
       // reset
       setPrevScroll(0);
       setWelcomeScroll(0);

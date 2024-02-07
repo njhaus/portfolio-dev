@@ -7,6 +7,8 @@ import WelcomeCertificates from "./components/WelcomeCertificates";
 import WelcomeAboutMe from "./components/WelcomeAboutMe";
 import Logos from "../../main/components/Logos";
 
+import DeviceDetector from "device-detector-js";
+
 interface Welcome {
   welcomeScroll: number;
   prevScroll: number;
@@ -35,6 +37,10 @@ const Welcome = ({
     CertificatesRef,
     AboutMeRef,
   ];
+
+
+  const deviceDetector = new DeviceDetector();
+  const device = deviceDetector.parse(navigator.userAgent);
 
   const welcomeArticles = [
     {
@@ -81,7 +87,11 @@ const Welcome = ({
 
   useEffect(() => {
     const target = refsArray[welcomeScroll]?.current;
-    if (target) {
+     if (device && device.device?.type !== "desktop") {
+       console.log("mobile");
+       return;
+     }
+    else if (target) {
       target.scrollIntoView({ behavior: "smooth" });
       console.log('temp')
     }
@@ -89,8 +99,15 @@ const Welcome = ({
 
 
   useEffect(() => {
-    handleWelcomeScroll(-1);
+     if (device && device.device?.type !== "desktop") {
+       console.log("mobile");
+       return;
+     }
+     else {
+      handleWelcomeScroll(-1);  
+    }
   }, []);
+
 
   return (
     <div className="h-full pb-5">
