@@ -8,7 +8,7 @@ interface Home {
 const Home = ({handleDialog}: Home) => {
   return (
     <>
-      <div className="ms-10 mt-8 mb-2">
+      <div className="mt-8 mb-2">
         <h1 className="text-8xl sm:text-9xl font-extralight ps-16">NICK</h1>
         <h1 className="text-8xl sm:text-9xl font-medium pe-16">HAUS</h1>
       </div>

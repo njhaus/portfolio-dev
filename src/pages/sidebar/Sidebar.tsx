@@ -17,7 +17,7 @@ interface Sidebar {
 const Sidebar = ({currPage, pageText, welcomeScroll, prevScroll, handleWelcomeScroll, handlePage, handleDialog}: Sidebar) => {
 
   return (
-    <aside className="relative w-5 bg-slate-200 h-full max-w-64 me-10 sm:w-1/5 z-30">
+    <>
       <div className="sidebar-decoration w-10 h-full bg-slate-200 absolute top-0 -right-10"></div>
       <MainImg />
       {currPage === 0 ? (
@@ -62,7 +62,7 @@ const Sidebar = ({currPage, pageText, welcomeScroll, prevScroll, handleWelcomeSc
           <p>Contact me</p>
         </button>
       </div>
-    </aside>
+    </>
   );
 }
 

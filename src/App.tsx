@@ -54,16 +54,18 @@ function App() {
       {contactDialogOpen && (
         <Contact handleDialog={handleDialog} dialogOpen={contactDialogOpen} />
       )}
-      <Sidebar
-        currPage={currPage}
-        pageText={pageText}
-        welcomeScroll={welcomeScroll}
-        prevScroll={prevScroll}
-        handleWelcomeScroll={handleWelcomeScroll}
-        handlePage={handlePage}
-        handleDialog={handleDialog}
-      />
-      <div className="main-container flex flex-col h-full -ms-10 md:w-4/5">
+      <aside className="relative w-5 bg-slate-200 h-full max-w-64 me-10 z-30 md:w-1/5">
+        <Sidebar
+          currPage={currPage}
+          pageText={pageText}
+          welcomeScroll={welcomeScroll}
+          prevScroll={prevScroll}
+          handleWelcomeScroll={handleWelcomeScroll}
+          handlePage={handlePage}
+          handleDialog={handleDialog}
+        />
+      </aside>
+      <div className="main-container flex flex-col h-full w-main-container  md:w-4/5">
         <Header
           pageText={pageText}
           currPage={currPage}
