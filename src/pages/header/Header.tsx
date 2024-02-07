@@ -13,7 +13,7 @@ interface Header {
 
 const Header = ({pageText, currPage, handlePage}: Header) => {
   return (
-    <header className={`sticky top-0 px-5 flex justify-between align-middle h-${headingHeight} w-full pt-3 z-40`}>
+    <header className={`px-5 flex justify-between align-middle h-${headingHeight} w-full pt-3 z-40`}>
       <div className='spacer sm:hidden'></div>
       <MainLogo handlePage={handlePage} />
       <DesktopNav pageText={pageText} currPage={currPage} handlePage={handlePage} />

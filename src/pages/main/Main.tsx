@@ -86,7 +86,7 @@ const Main = ({ page, welcomeScroll, prevScroll, handleWelcomeScroll, handlePage
         onTouchStart={() => handleManualScroll()}
         onTouchEnd={() => handleManualScroll()}
       >
-        <div ref={welcomeRef} className="h-full pb-5 min-h-[40rem]">
+        <div ref={welcomeRef} className="pb-5 h-[40rem]">
           {pageData[page].component}
         </div>
       </section>
