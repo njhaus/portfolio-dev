@@ -80,9 +80,9 @@ const Main = ({ page, welcomeScroll, prevScroll, handleWelcomeScroll, handlePage
     //   return;
     // }
     // else
-      if (welcomeRef && welcomeRef?.current)
+      if (scrollRef && scrollRef?.current)
       {
-        welcomeRef?.current.scrollTo(0, 0);
+        scrollRef?.current.scrollTo(0, 0);
       }
   }, [page]);
 
