@@ -75,11 +75,11 @@ const Main = ({ page, welcomeScroll, prevScroll, handleWelcomeScroll, handlePage
   }
 
   useEffect(() => {
-    // if (device && device.device?.type !== "desktop") {
-    //   console.log("mobile");
-    //   return;
-    // }
-    // else
+    if (device && device.device?.type !== "desktop") {
+      console.log("mobile");
+      return;
+    }
+    else
       if (scrollRef && scrollRef?.current) scrollRef?.current.scrollTo(0, 0);
   }, [page]);
 
