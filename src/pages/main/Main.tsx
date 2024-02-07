@@ -74,9 +74,10 @@ const Main = ({ page, welcomeScroll, prevScroll, handleWelcomeScroll, handlePage
     }
   }
 
-  // useEffect(() => {
-  //   if (scrollRef && scrollRef?.current) scrollRef?.current.scrollTo(0, 0);
-  // }, [page]);
+  useEffect(() => {
+    // if (scrollRef && scrollRef?.current) scrollRef?.current.scrollTo(0, 0);
+    console.log('temp')
+  }, [page]);
 
   return (
     <main className={`flex h-less w-full px-3`}>

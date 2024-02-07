@@ -74,21 +74,24 @@ const Welcome = ({ welcomeScroll, prevScroll, handleWelcomeScroll, handlePage, h
     },
   ];
 
-  // useEffect(() => {
-  //   const target = refsArray[welcomeScroll]?.current;
-  //   if (target) {
-  //       target.scrollIntoView({ behavior: "smooth" }); 
-  //   }
-  // }, [welcomeScroll])
+  useEffect(() => {
+    // const target = refsArray[welcomeScroll]?.current;
+    // if (target) {
+    //     target.scrollIntoView({ behavior: "smooth" });
+    // }
+    console.log('temp')
+  }, [welcomeScroll])
 
 
-  // useEffect(() => {
-  //   handleWelcomeScroll(-1);
-  // }, []);
+  useEffect(() => {
+    // handleWelcomeScroll(-1);
+    console.log("temp");
+  }, []);
 
-  // useEffect(() => {
-  //   window.scrollTo(0,0)
-  // }, [])
+  useEffect(() => {
+    // window.scrollTo(0,0)
+    console.log("temp");
+  }, [])
 
   return (
     <div className="h-full pb-5">
