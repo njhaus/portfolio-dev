@@ -82,7 +82,7 @@ const Main = ({ page, welcomeScroll, prevScroll, handleWelcomeScroll, handlePage
     else
       if (scrollRef && scrollRef?.current)
       {
-        // scrollRef?.current.scrollTo(0, 0);
+        scrollRef?.current.scrollTo(0, 0);
         console.log('temp')
       }
   }, [page]);
