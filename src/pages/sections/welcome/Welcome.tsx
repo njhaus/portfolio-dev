@@ -6,6 +6,7 @@ import WelcomePortfolio from "./components/WelcomePortfolio";
 import WelcomeCertificates from "./components/WelcomeCertificates";
 import WelcomeAboutMe from "./components/WelcomeAboutMe";
 import Logos from "../../main/components/Logos";
+import DeviceDetector from "device-detector-js";
 
 interface Welcome {
   welcomeScroll: number;
@@ -16,6 +17,10 @@ interface Welcome {
 }
 
 const Welcome = ({ welcomeScroll, prevScroll, handleWelcomeScroll, handlePage, handleDialog }: Welcome) => {
+
+  const deviceDetector = new DeviceDetector();
+  const device = deviceDetector.parse(navigator.userAgent);
+  
   
   const homeRef = useRef<HTMLDivElement | null>(null)
   const ResumeRef = useRef(null);
@@ -87,7 +92,13 @@ const Welcome = ({ welcomeScroll, prevScroll, handleWelcomeScroll, handlePage, h
   }, []);
 
   useEffect(() => {
-    window.scrollTo(0,0)
+     if (device && device.device?.type !== "desktop") {
+       console.log("mobile");
+       return;
+     }
+     else {
+      window.scrollTo(0, 0);  
+    }
   }, [])
 
   return (
