@@ -15,7 +15,12 @@ interface Welcome {
   handleDialog: (set: boolean) => void;
 }
 
-const Welcome = ({ welcomeScroll, prevScroll, handleWelcomeScroll, handlePage, handleDialog }: Welcome) => {
+const Welcome = ({
+  welcomeScroll,
+  prevScroll,
+  // handleWelcomeScroll,
+  handlePage,
+  handleDialog }: Welcome) => {
   
   const homeRef = useRef<HTMLDivElement | null>(null)
   const ResumeRef = useRef(null);
@@ -75,11 +80,11 @@ const Welcome = ({ welcomeScroll, prevScroll, handleWelcomeScroll, handlePage, h
   ];
 
   useEffect(() => {
-    // const target = refsArray[welcomeScroll]?.current;
-    // if (target) {
-    //     target.scrollIntoView({ behavior: "smooth" });
-    // }
-    console.log('temp')
+    const target = refsArray[welcomeScroll]?.current;
+    if (target) {
+      // target.scrollIntoView({ behavior: "smooth" });
+      console.log("temp");
+    }
   }, [welcomeScroll])
 
 
