@@ -89,11 +89,13 @@ const Welcome = ({
 
 
   useEffect(() => {
-    handleWelcomeScroll(-1);
+    // handleWelcomeScroll(-1);
+    console.log("temp");
   }, []);
 
   useEffect(() => {
-    window.scrollTo(0,0)
+    // window.scrollTo(0,0)
+    console.log("temp");
   }, [])
 
   return (
