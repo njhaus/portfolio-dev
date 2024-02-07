@@ -787,6 +787,10 @@ video {
   max-height: 100vh;
 }
 
+.max-h-svh {
+  max-height: 100svh;
+}
+
 .min-h-\[40rem\] {
   min-height: 40rem;
 }
@@ -940,6 +944,10 @@ video {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
 }
 
 .overflow-y-scroll {

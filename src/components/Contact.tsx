@@ -42,7 +42,7 @@ const Contact = ({ handleDialog, dialogOpen }: iContact) => {
 
   return (
     <div
-      className="fixed bg-slate-800 bg-opacity-40 w-screen h-screen z-50 dialog-overlay"
+      className="fixed bg-slate-800 bg-opacity-40 w-screen h-screen z-50 dialog-overlay max-h-svh overflow-y-auto"
       id="dialog-overlay"
       onClick={(e) => stopCloseDialog(e)}
     >

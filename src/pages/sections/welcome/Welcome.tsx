@@ -74,21 +74,21 @@ const Welcome = ({ welcomeScroll, prevScroll, handleWelcomeScroll, handlePage, h
     },
   ];
 
-  useEffect(() => {
-    const target = refsArray[welcomeScroll]?.current;
-    if (target) {
-        target.scrollIntoView({ behavior: "smooth" }); 
-    }
-  }, [welcomeScroll])
+  // useEffect(() => {
+  //   const target = refsArray[welcomeScroll]?.current;
+  //   if (target) {
+  //       target.scrollIntoView({ behavior: "smooth" }); 
+  //   }
+  // }, [welcomeScroll])
 
 
-  useEffect(() => {
-    handleWelcomeScroll(-1);
-  }, []);
+  // useEffect(() => {
+  //   handleWelcomeScroll(-1);
+  // }, []);
 
-  useEffect(() => {
-    window.scrollTo(0,0)
-  }, [])
+  // useEffect(() => {
+  //   window.scrollTo(0,0)
+  // }, [])
 
   return (
     <div className="h-full pb-5">
