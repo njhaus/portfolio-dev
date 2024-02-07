@@ -18,7 +18,7 @@ interface Welcome {
 const Welcome = ({
   welcomeScroll,
   prevScroll,
-  handleWelcomeScroll,
+  // handleWelcomeScroll,
   handlePage,
   handleDialog }: Welcome) => {
   
