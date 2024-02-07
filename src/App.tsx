@@ -53,7 +53,7 @@ function App() {
         handlePage={handlePage}
         handleDialog={handleDialog}
       />
-      <div className="flex-col grow h-full w-4/5">
+      <div className="main-container flex-col grow h-full w-4/5">
         <Header
           pageText={pageText}
           currPage={currPage}
@@ -68,7 +68,6 @@ function App() {
           handleDialog={handleDialog}
         />
       </div>
-      <footer className="h-10"></footer>
     </div>
   );
 }

@@ -34,7 +34,7 @@ const Nav = ({ pageText, currPage, handlePage }: Nav) => {
       </div>
       {navOpen && (
         <ul className="flex flex-col align-middle absolute z-20 bg-white rounded-xl shadow-md border border-slate-100 pt-10 right-0 sm:right-5 top-14 sm:top-14 w-less sm:w-fit h-less sm:h-fit">
-          {pageText.slice(1).map((pg, i) => (
+          {pageText.map((pg, i) => (
             <div className="w-100 h-100 px-10">
               <NavItem
                 key={i}

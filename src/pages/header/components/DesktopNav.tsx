@@ -12,8 +12,8 @@ const Nav = ({ pageText, currPage, handlePage }: Nav) => {
 
   return (
     <nav className="hidden md:flex align-middle">
-      <ul className="flex gap-12 align-middle">
-        {pageText.slice(1).map((pg, i) => (
+      <ul className="flex gap-8 align-middle">
+        {pageText.map((pg, i) => (
           <NavItem
             key={i}
             pageText={pg}

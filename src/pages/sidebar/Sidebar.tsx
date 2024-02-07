@@ -1,6 +1,7 @@
 import SideMenu from '../sidebar/components/SideMenu'
 import SideMenuHome from './components/SideMenuHome'
 import MainImg from './components/MainImg'
+import { pageTextHome } from '../../data/pageData'
 
 
 interface Sidebar {
@@ -21,13 +22,13 @@ const Sidebar = ({currPage, pageText, welcomeScroll, prevScroll, handleWelcomeSc
       <MainImg />
       {currPage === 0 ? (
         <ul className="side-menu inline-block min-w-40">
-          {pageText.map((pg, i) => (
+          {pageTextHome.map((pg, i) => (
             <SideMenuHome
               key={i}
               pageText={pg}
               welcomeScroll={welcomeScroll}
               prevScroll={prevScroll}
-              pageNumber={pageText.indexOf(pg)}
+              pageNumber={pageTextHome.indexOf(pg)}
               handleWelcomeScroll={handleWelcomeScroll}
             />
           ))}

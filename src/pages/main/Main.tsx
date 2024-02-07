@@ -57,7 +57,7 @@ const Main = ({ page, welcomeScroll, prevScroll, handleWelcomeScroll, handlePage
   const handleManualScroll = () => {
     if (welcomeRef && welcomeRef.current) {
       const rect = welcomeRef.current.getBoundingClientRect();
-      const scrollPosition = Math.round(Math.abs(parseFloat((((rect.y) / window.innerHeight)).toFixed(1)))) ;
+      const scrollPosition = Math.round(Math.abs(((rect.y + 72) / 640))) ;
       console.log(scrollPosition)
       if (scrollPosition !== welcomeScroll && scrollPosition < pageData.length) {
         handleWelcomeScroll(scrollPosition);
@@ -70,13 +70,14 @@ const Main = ({ page, welcomeScroll, prevScroll, handleWelcomeScroll, handlePage
   }, [page]);
 
   return (
-    <main className={`flex h-less w-full`}>
+    <main className={`flex h-less w-full p-2`}>
       <section
         ref={scrollRef}
         className="flex-grow max-w-1/2 overflow-y-scroll px-5"
         onWheel={() => handleManualScroll()}
+        onTouchMove={() => handleManualScroll()}
       >
-        <div ref={welcomeRef} className="h-full pb-5 min-h-[32rem]">
+        <div ref={welcomeRef} className="h-full pb-5 min-h-[40rem]">
           {pageData[page].component}
         </div>
       </section>
