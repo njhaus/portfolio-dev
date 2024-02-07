@@ -21,18 +21,32 @@ const Sidebar = ({currPage, pageText, welcomeScroll, prevScroll, handleWelcomeSc
       <div className="sidebar-decoration w-10 h-full bg-slate-200 absolute top-0 -right-10"></div>
       <MainImg />
       {currPage === 0 ? (
-        <ul className="side-menu inline-block min-w-40">
-          {pageTextHome.map((pg, i) => (
-            <SideMenuHome
-              key={i}
-              pageText={pg}
-              welcomeScroll={welcomeScroll}
-              prevScroll={prevScroll}
-              pageNumber={pageTextHome.indexOf(pg)}
-              handleWelcomeScroll={handleWelcomeScroll}
-            />
-          ))}
-        </ul>
+        <>
+          {/* Display navigation on mobile. Display scroller on desktop */}
+          <ul className="hidden side-menu min-w-40 md:inline-block">
+            {pageTextHome.map((pg, i) => (
+              <SideMenuHome
+                key={i}
+                pageText={pg}
+                welcomeScroll={welcomeScroll}
+                prevScroll={prevScroll}
+                pageNumber={pageTextHome.indexOf(pg)}
+                handleWelcomeScroll={handleWelcomeScroll}
+              />
+            ))}
+          </ul>
+          <ul className="side-menu inline-block min-w-40 md:hidden">
+            {pageText.map((pg, i) => (
+              <SideMenu
+                key={i}
+                pageText={pg}
+                currPage={currPage}
+                pageNumber={pageText.indexOf(pg)}
+                handlePage={handlePage}
+              />
+            ))}
+          </ul>
+        </>
       ) : (
         <ul className="side-menu inline-block min-w-40">
           {pageText.map((pg, i) => (

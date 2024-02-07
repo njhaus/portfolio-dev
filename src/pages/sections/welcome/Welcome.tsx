@@ -93,7 +93,6 @@ const Welcome = ({
      }
     else if (target) {
       target.scrollIntoView({ behavior: "smooth" });
-      console.log('temp')
     }
   }, [welcomeScroll])
 
@@ -105,6 +104,16 @@ const Welcome = ({
      }
      else {
       handleWelcomeScroll(-1);  
+    }
+  }, []);
+
+
+  useEffect(() => {
+    if (device && device.device?.type !== "desktop") {
+      console.log("mobile");
+      return;
+    } else {
+      window.scrollTo(0,0)
     }
   }, []);
 
