@@ -84,8 +84,6 @@ const Main = ({ page, welcomeScroll, prevScroll, handleWelcomeScroll, handlePage
         ref={scrollRef}
         className="flex-grow max-w-1/2 overflow-y-scroll "
         onWheel={() => handleManualScroll()}
-        onTouchStart={() => handleManualScroll()}
-        onTouchEnd={() => handleManualScroll()}
       >
         <div ref={welcomeRef} className="pb-5 h-[40rem]">
           {pageData[page].component}
