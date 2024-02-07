@@ -31,13 +31,13 @@
         height: calc(100dvh - 5rem);
     }
     .w-less {
-        width: calc(100vw - 2rem);
+        width: calc(100dvw - 2rem);
     }
     .w-less-2 {
-        width: calc(100vw - 4.75rem);
+        width: calc(100dvw - 4.75rem);
     }
     .w-main-container {
-        width: calc(100vw - 60px)
+        width: calc(100dvw - 60px)
     }
     .yellow {
         background-color: goldenrod;

@@ -30,7 +30,7 @@
 body {
     position: fixed;
     margin: 0;
-    width: 100vw;
+    width: 100dvw;
     max-width: 1300px;
     height: 100dvh;
     overflow-x: hidden;

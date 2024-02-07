@@ -79,7 +79,7 @@ const Main = ({ page, welcomeScroll, prevScroll, handleWelcomeScroll, handlePage
   }, [page]);
 
   return (
-    <main className={`flex h-less w-full ps-10`}>
+    <main className={`flex h-less w-full px-3`}>
       <section
         ref={scrollRef}
         className="flex-grow max-w-1/2 overflow-y-scroll "
