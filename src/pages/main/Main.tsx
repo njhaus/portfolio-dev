@@ -79,7 +79,7 @@ const Main = ({ page, welcomeScroll, prevScroll, handleWelcomeScroll, handlePage
       console.log("mobile");
       return;
     }
-    else if (scrollRef && scrollRef?.current) scrollRef?.current.scrollIntoView({behavior: 'instant'});
+    else if (scrollRef && scrollRef?.current) scrollRef?.current.scrollTo(0, 0);
   }, [page]);
 
   return (
