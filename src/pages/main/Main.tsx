@@ -75,15 +75,14 @@ const Main = ({ page, welcomeScroll, prevScroll, handleWelcomeScroll, handlePage
   }
 
   useEffect(() => {
-    if (device && device.device?.type !== "desktop") {
-      console.log("mobile");
-      return;
-    }
-    else
-      if (scrollRef && scrollRef?.current)
+    // if (device && device.device?.type !== "desktop") {
+    //   console.log("mobile");
+    //   return;
+    // }
+    // else
+      if (welcomeRef && welcomeRef?.current)
       {
-        scrollRef?.current.scrollTo(0, 0);
-        console.log('temp')
+        welcomeRef?.current.scrollTo(0, 0);
       }
   }, [page]);
 
