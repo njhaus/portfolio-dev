@@ -18,7 +18,7 @@ const SideMenu = ({ pageText, currPage, pageNumber, handlePage }: Sidemenu) => {
         }}
       ></div>
       <button
-        className={`hidden sm:block h-7 bg-slate-300 border-main border rounded-lg flex-grow ${clsName}`}
+        className={`hidden h-7 bg-slate-300 border-main border rounded-lg flex-grow ${clsName} md:block`}
         onClick={() => {
           handlePage(pageNumber);
         }}

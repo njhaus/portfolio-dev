@@ -860,6 +860,19 @@ video {
   min-width: 10rem;
 }
 
+.min-w-fit {
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
+.min-w-96 {
+  min-width: 24rem;
+}
+
+.min-w-\[10rem\] {
+  min-width: 10rem;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -908,6 +921,10 @@ video {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.items-start {
+  align-items: flex-start;
 }
 
 .items-center {
