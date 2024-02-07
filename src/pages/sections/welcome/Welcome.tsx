@@ -80,15 +80,27 @@ const Welcome = ({ welcomeScroll, prevScroll, handleWelcomeScroll, handlePage, h
   ];
 
   useEffect(() => {
-    const target = refsArray[welcomeScroll]?.current;
-    if (target) {
-        target.scrollIntoView({ behavior: "smooth" }); 
+    if (device && device.device?.type !== "desktop") {
+      console.log("mobile");
+      return;
+    }
+    else {
+      const target = refsArray[welcomeScroll]?.current;
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
     }
   }, [welcomeScroll])
 
 
   useEffect(() => {
-    handleWelcomeScroll(-1);
+    if (device && device.device?.type !== "desktop") {
+      console.log("mobile");
+      return;
+    }
+    else {
+      handleWelcomeScroll(-1);
+    }
   }, []);
 
   useEffect(() => {
