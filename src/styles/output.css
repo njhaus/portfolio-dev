@@ -628,6 +628,10 @@ video {
   z-index: 50;
 }
 
+.z-30 {
+  z-index: 30;
+}
+
 .mx-10 {
   margin-left: 2.5rem;
   margin-right: 2.5rem;
@@ -784,11 +788,11 @@ video {
 }
 
 .h-screen {
-  height: 100dvh;
+  height: 100vh;
 }
 
 .max-h-screen {
-  max-height: 100dvh;
+  max-height: 100vh;
 }
 
 .min-h-\[40rem\] {

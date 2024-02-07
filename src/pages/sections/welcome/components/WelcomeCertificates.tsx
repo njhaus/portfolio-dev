@@ -1,6 +1,7 @@
 import { mainBtn } from "../../../../styles/classes";
 
 import Divider from "../../../../components/Divider";
+import DeviceDetector from "device-detector-js";
 
 const WelcomeCertificates = ({
   handlePage,
@@ -15,19 +16,26 @@ const WelcomeCertificates = ({
   }) => {
   
   
+  const deviceDetector = new DeviceDetector();
+
+  const mobileOverride =
+    deviceDetector.parse(navigator.userAgent).device?.type !== "desktop"
+      ? true
+      : false;
+
   const animateLeft =
-    welcomeScroll < page
+    welcomeScroll === page - 1 && !mobileOverride
       ? "opacity-0"
-      : welcomeScroll === page && welcomeScroll >= prevScroll
+      : welcomeScroll === page && welcomeScroll >= prevScroll && !mobileOverride
       ? "opacity-0 main-animate-left"
-      : "";
+      : "opacity-1";
 
   const animateRight =
-    welcomeScroll < page
+    welcomeScroll === page - 1 && !mobileOverride
       ? "opacity-0"
-      : welcomeScroll === page && welcomeScroll >= prevScroll
+      : welcomeScroll === page && welcomeScroll >= prevScroll && !mobileOverride
       ? "opacity-0 main-animate-right"
-      : "";
+        : "opacity-1";
   
   return (
     <>
